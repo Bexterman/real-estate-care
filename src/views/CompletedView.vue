@@ -8,15 +8,15 @@
             <ion-card class="main-card-container">
               <ion-card-header class="main-card-header">
                 <ion-card-title class="main-card-title">
-                  <h1>Overview</h1>
+                  <h1>Taken</h1>
                 </ion-card-title>
                 <ion-card-subtitle class="main-card-subtitle">
-                  <p>Please select option</p>
+                  <p>Selecteer een optie</p>
                 </ion-card-subtitle>
               </ion-card-header>
 
               <ion-card-content class="main-card-content">
-                <h2>Completed</h2>
+                <h2>Afgerond</h2>
                 <ol>
                   <li>Appointment</li>
                   <li>Appointment</li>
@@ -28,7 +28,19 @@
               </ion-card-content>
               <ion-card-content class="main-card-content">
                 
-                <h2>Pending</h2>
+                <h2>Actief</h2>
+                <ol>
+                  <li>Appointment</li>
+                  <li>Appointment</li>
+                  <li>Appointment</li>
+                  <li>Appointment</li>
+                  <li>Appointment</li>
+                  <li>Appointment</li>
+                </ol>
+              </ion-card-content>
+              <ion-card-content class="main-card-content">
+                
+                <h2>Nonactief</h2>
                 <ol>
                   <li>Appointment</li>
                   <li>Appointment</li>

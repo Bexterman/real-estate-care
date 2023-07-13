@@ -8,10 +8,10 @@
             <ion-card class="main-card-container">
               <ion-card-header class="main-card-header">
                 <ion-card-title class="main-card-title">
-                  <h1>Knowledgebase</h1>
+                  <h1>Kennisbank</h1>
                 </ion-card-title>
                 <ion-card-subtitle class="main-card-subtitle">
-                  <p>Please select option</p>
+                  <p>Selecteer een optie</p>
                 </ion-card-subtitle>
               </ion-card-header>
 

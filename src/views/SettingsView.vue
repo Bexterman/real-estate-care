@@ -8,15 +8,15 @@
             <ion-card class="main-card-container">
               <ion-card-header class="main-card-header">
                 <ion-card-title class="main-card-title">
-                  <h1>Settings</h1>
+                  <h1>Instellingen</h1>
                 </ion-card-title>
                 <ion-card-subtitle class="main-card-subtitle">
-                  <p>Please select option</p>
+                  <p>Selecteer een optie</p>
                 </ion-card-subtitle>
               </ion-card-header>
 
               <ion-card-content class="main-card-content">
-                <h2>Profile settings</h2>
+                <h2>Profiel instellingen</h2>
                 <ol>
                   <li>Change ...</li>
                   <li>Change ...</li>
@@ -28,7 +28,7 @@
               </ion-card-content>
 
               <ion-card-content class="main-card-content">
-                <h2>General settings</h2>
+                <h2>Algemene instellingen</h2>
                 <ol>
                   <li>Change ...</li>
                   <li>Change ...</li>

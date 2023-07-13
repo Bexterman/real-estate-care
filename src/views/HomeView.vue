@@ -9,7 +9,7 @@
           <ion-card class="card-container" router-link="/scheduled">
                 <ion-card-content class="card-content-wrapper">
                     <ion-icon class="content-icon" :src="calendarClearOutline"></ion-icon>
-                    <span class="card-title">Scheduled</span>
+                    <span class="card-title">Planning</span>
                 </ion-card-content>
           </ion-card>
 
@@ -17,7 +17,7 @@
           <ion-card class="card-container" router-link="/completed">
                 <ion-card-content class="card-content-wrapper">
                     <ion-icon class="content-icon" :src="checkmarkCircle"></ion-icon>
-                    <span class="card-title">Completed</span>
+                    <span class="card-title">Taken</span>
                 </ion-card-content>
           </ion-card>
 
@@ -25,7 +25,7 @@
           <ion-card class="card-container" router-link="/knowledgebase">
                 <ion-card-content class="card-content-wrapper">
                     <ion-icon class="content-icon" :src="school"></ion-icon>
-                    <span class="card-title">Knowledge base</span>
+                    <span class="card-title">Kennisbank</span>
                 </ion-card-content>
           </ion-card>
 
@@ -33,7 +33,7 @@
           <ion-card class="card-container" router-link="/settings">
                 <ion-card-content class="card-content-wrapper">
                     <ion-icon class="content-icon" :src="person"></ion-icon>
-                    <span class="card-title">Profile</span>
+                    <span class="card-title">Profiel</span>
                 </ion-card-content>
           </ion-card>
 

@@ -40,21 +40,21 @@
               <ion-item>
                 <div class="footer-icon-wrapper hover-routerlink">
                   <ion-icon class="footer-icon" :src="buildOutline" size="large"></ion-icon>
-                  <span class="footer-icon-text">Active task</span>
+                  <span class="footer-icon-text">Actieve taak</span>
                 </div>
               </ion-item>
 
               <ion-item>
                 <div class="footer-icon-wrapper hover-routerlink">
                   <ion-icon class="footer-icon" :src="searchOutline" size="large"></ion-icon>
-                  <span class="footer-icon-text">Search</span>
+                  <span class="footer-icon-text">Zoeken</span>
                 </div>
               </ion-item>
 
               <ion-item>
                 <div class="footer-icon-wrapper hover-routerlink">
                   <ion-icon class="footer-icon" :src="informationCircleOutline" size="large"></ion-icon>
-                  <span class="footer-icon-text">Information</span>
+                  <span class="footer-icon-text">Informatie</span>
                 </div>
               </ion-item>
 

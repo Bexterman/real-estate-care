@@ -8,15 +8,15 @@
             <ion-card class="main-card-container">
               <ion-card-header class="main-card-header">
                 <ion-card-title class="main-card-title">
-                  <h1>Overview</h1>
+                  <h1>Meldingen</h1>
                 </ion-card-title>
                 <ion-card-subtitle class="main-card-subtitle">
-                  <p>Please select option</p>
+                  <p>Selecteer een optie</p>
                 </ion-card-subtitle>
               </ion-card-header>
 
               <ion-card-content class="main-card-content">
-                <h2>Unread notifications</h2>
+                <h2>Ongelezen</h2>
                 <ol>
                   <li>Notification #</li>
                   <li>Notification #</li>
@@ -28,7 +28,7 @@
               </ion-card-content>
               <ion-card-content class="main-card-content">
                 
-                <h2>Read notifications</h2>
+                <h2>Gelezen</h2>
                 <ol>
                   <li>Notification #</li>
                   <li>Notification #</li>
