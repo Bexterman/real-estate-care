@@ -10,7 +10,7 @@ import NotificationsView from '@/views/NotificationsView.vue';
 
 const routes: Array<RouteRecordRaw> = [
   {
-    path: '/',
+    path: '/index.html',
     redirect: '/home',
   },
   {
