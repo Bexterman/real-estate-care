@@ -16,26 +16,26 @@
               </ion-card-header>
 
               <ion-card-content class="main-card-content">
-                <h2>Theme 1</h2>
+                <h2>Thema 1</h2>
                 <ol>
-                  <li>Subject #</li>
-                  <li>Subject #</li>
-                  <li>Subject #</li>
-                  <li>Subject #</li>
-                  <li>Subject #</li>
-                  <li>Subject #</li>
+                  <li>Onderwerp #</li>
+                  <li>Onderwerp #</li>
+                  <li>Onderwerp #</li>
+                  <li>Onderwerp #</li>
+                  <li>Onderwerp #</li>
+                  <li>Onderwerp #</li>
                 </ol>
               </ion-card-content>
 
               <ion-card-content class="main-card-content">
-                <h2>Theme 2</h2>
+                <h2>Thema 2</h2>
                 <ol>
-                  <li>Subject #</li>
-                  <li>Subject #</li>
-                  <li>Subject #</li>
-                  <li>Subject #</li>
-                  <li>Subject #</li>
-                  <li>Subject #</li>
+                  <li>Onderwerp #</li>
+                  <li>Onderwerp #</li>
+                  <li>Onderwerp #</li>
+                  <li>Onderwerp #</li>
+                  <li>Onderwerp #</li>
+                  <li>Onderwerp #</li>
                 </ol>
               </ion-card-content>
             </ion-card>

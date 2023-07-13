@@ -17,7 +17,7 @@
           <ion-card class="card-container" router-link="/completed">
                 <ion-card-content class="card-content-wrapper">
                     <ion-icon class="content-icon" :src="checkmarkCircle"></ion-icon>
-                    <span class="card-title">Taken</span>
+                    <span class="card-title">Rapportages</span>
                 </ion-card-content>
           </ion-card>
 

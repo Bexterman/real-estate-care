@@ -18,24 +18,24 @@
               <ion-card-content class="main-card-content">
                 <h2>Profiel instellingen</h2>
                 <ol>
-                  <li>Change ...</li>
-                  <li>Change ...</li>
-                  <li>Change ...</li>
-                  <li>Change ...</li>
-                  <li>Change ...</li>
-                  <li>Change ...</li>
+                  <li>(iets) aanpassen</li>
+                  <li>(iets) aanpassen</li>
+                  <li>(iets) aanpassen</li>
+                  <li>(iets) aanpassen</li>
+                  <li>(iets) aanpassen</li>
+                  <li>(iets) aanpassen</li>
                 </ol>
               </ion-card-content>
 
               <ion-card-content class="main-card-content">
                 <h2>Algemene instellingen</h2>
                 <ol>
-                  <li>Change ...</li>
-                  <li>Change ...</li>
-                  <li>Change ...</li>
-                  <li>Change ...</li>
-                  <li>Change ...</li>
-                  <li>Change ...</li>
+                  <li>(iets) aanpassen</li>
+                  <li>(iets) aanpassen</li>
+                  <li>(iets) aanpassen</li>
+                  <li>(iets) aanpassen</li>
+                  <li>(iets) aanpassen</li>
+                  <li>(iets) aanpassen</li>
                 </ol>
               </ion-card-content>
             </ion-card>

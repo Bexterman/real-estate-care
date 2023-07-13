@@ -25,44 +25,19 @@
   font-family: 'Roboto', 'Verdana', 'Arial', sans-serif;
 }
 
-body {
-  background: #fff;
+body,
+ion-app,
+ion-page,
+ion-toolbar,
+ion-header {
+  background-color: #fff;
 }
-
-
 
 .maximum-width {
   width: 100%;
   height: 100%;
   max-width: 1200px;
   margin: 0 auto;
-}
-
-a {
-  text-decoration: none;
-}
-
-ion-button {
-  --fill: clear;
-  padding: 0;
-  height: inherit;
-  text-transform: none;
-  outline: none;
-}
-
-.list-md {
-  padding: 0;
-}
-
-ion-item {
-  --background: none;
-}
-
-ion-app,
-ion-page,
-ion-toolbar,
-ion-header {
-  --background: #fff;
 }
 
 ion-content {
@@ -74,6 +49,36 @@ ion-toolbar {
   -moz-box-shadow: 0px 5px 11px -6px rgba(0,0,0,0.75);
   box-shadow: 0px 5px 11px -6px rgba(0,0,0,0.75);
 }
+
+
+a {
+  text-decoration: none;
+}
+
+ion-button {
+  --background: var(--rec-primary-color);
+  --background-actovated: var(--rec-secondary-color);
+}
+
+ion-button:hover {
+  --background: var(--rec-tertiaire-color);
+  --color: var(--rec-primary-color);
+}
+
+ion-button:active {
+  --background: var(--rec-secondary-color);
+  --color: var(--rec-primary-color);
+}
+
+.list-md {
+  padding: 0;
+}
+
+ion-item {
+  --background: none;
+}
+
+
 
 .hover-routerlink:hover,
 .hover-routerlink:active {
