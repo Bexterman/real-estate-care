@@ -8,7 +8,7 @@
             <ion-card class="main-card-container">
               <ion-card-header class="main-card-header">
                 <ion-card-title class="main-card-title">
-                  <h1>Planning</h1>
+                  <h1>Toegewezen</h1>
                 </ion-card-title>
                 <ion-card-subtitle class="main-card-subtitle">
                   <p>Selecteer een optie</p>
@@ -41,7 +41,7 @@ import { defineComponent } from 'vue';
 import { IonPage, IonContent, IonCard, IonCardContent, IonCardHeader, IonCardSubtitle, IonCardTitle } from '@ionic/vue';
 
 export default defineComponent({
-  name: 'SchedueldView',
+  name: 'AssignedView',
   components: {
     PageLayout,
     IonPage,

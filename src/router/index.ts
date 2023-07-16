@@ -2,7 +2,7 @@ import { createRouter, createWebHistory } from '@ionic/vue-router';
 import { RouteRecordRaw } from 'vue-router';
 
 import HomeView from '@/views/HomeView.vue';
-import ScheduledView from '@/views/ScheduledView.vue';
+import AssignedView from '@/views/AssignedView.vue';
 import CompletedView from '@/views/CompletedView.vue';
 import KnowledgeBaseView from '@/views/KnowledgeBaseView.vue';
 import SettingsView from '@/views/SettingsView.vue';
@@ -19,9 +19,9 @@ const routes: Array<RouteRecordRaw> = [
     component: HomeView
   },
   {
-    path: '/scheduled',
-    name: 'Scheduled',
-    component: ScheduledView
+    path: '/assigned',
+    name: 'Assigned',
+    component: AssignedView
   },
   {
     path: '/completed',

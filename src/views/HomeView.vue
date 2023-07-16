@@ -6,10 +6,10 @@
         <div class="home-main-container">
 
           <!-- Schedule Button -->
-          <ion-card class="card-container" router-link="/scheduled">
+          <ion-card class="card-container" router-link="/assigned">
                 <ion-card-content class="card-content-wrapper">
-                    <ion-icon class="content-icon" :src="calendarClearOutline"></ion-icon>
-                    <span class="card-title">Planning</span>
+                    <ion-icon class="content-icon" :src="bookmarks"></ion-icon>
+                    <span class="card-title">Toegewezen</span>
                 </ion-card-content>
           </ion-card>
 
@@ -17,7 +17,7 @@
           <ion-card class="card-container" router-link="/completed">
                 <ion-card-content class="card-content-wrapper">
                     <ion-icon class="content-icon" :src="checkmarkCircle"></ion-icon>
-                    <span class="card-title">Rapportages</span>
+                    <span class="card-title">Uitgevoerd</span>
                 </ion-card-content>
           </ion-card>
 
@@ -48,7 +48,7 @@
 import PageLayout from '@/components/PageLayout.vue';
 import { defineComponent } from 'vue';
 import { IonPage, IonContent, IonCard, IonCardContent, IonCardHeader, IonCardSubtitle, IonCardTitle, IonIcon, IonButton } from '@ionic/vue';
-import { calendarClearOutline, checkmarkCircle, school, person } from 'ionicons/icons'
+import { bookmarks, checkmarkCircle, school, person } from 'ionicons/icons'
 
 
 export default defineComponent({
@@ -67,7 +67,7 @@ export default defineComponent({
   },
   setup() {
     return {
-      calendarClearOutline,
+      bookmarks,
       checkmarkCircle,
       school,
       person

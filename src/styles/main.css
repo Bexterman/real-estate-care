@@ -1,17 +1,6 @@
 /* -------------------# Fonts #------------------- */
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
-
-
-/* -------------------# Variables #------------------- */
-:root {
-  --rec-primary-color: rgba(41, 52, 57, 1);
-  --rec-secondary-color: rgba(0, 170, 162, 1);
-  --rec-secondary-color-tr: rgba(0, 170, 162, 0.5);
-  --rec-tertiaire-color: rgb(220, 220, 220, 1);
-  --rec-tertiaire-color-tr: rgba(255, 255, 255, 0.09);
-  --rec-gradient-color: linear-gradient(to right, rgba(71, 94, 108, 1), rgba(20, 27, 31, 1));
-}
-
+@import url('../theme/variables.css');
 
 /* -------------------# Global Styles #------------------- */
 * {
@@ -25,7 +14,6 @@
   font-family: 'Roboto', 'Verdana', 'Arial', sans-serif;
 }
 
-body,
 ion-app,
 ion-page,
 ion-toolbar,
