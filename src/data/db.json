@@ -1,0 +1,292 @@
+[
+  {
+    "id": 1,
+    "date": "2023-01-20",
+    "location": "Burgemeester Knappertlaan 212A, Schiedam",
+    "report": [
+      {
+        "damage": {
+          "room": "Keuken",
+          "new": true,
+          "type": "Slijtage",
+          "noticed": "2022-12-05",
+          "action_required": true,
+          "description": "Gat in de vloer te zien, vermoeden van slijtage steunbalk. Woning gebouwd in 1916.",
+          "image_a": "foto1.jpeg",
+          "image_b": "foto2.jpeg",
+          "image_c": "foto3.jpeg"
+        }
+      },
+      {
+        "maintenance": {
+          "room": "Woonkamer",
+          "type": "Elektra",
+          "action_required": true,
+          "estimated_expense": "500-1500",
+          "image_a": "foto4.jpeg",
+          "image_b": "foto5.jpeg",
+          "image_c": "foto6.jpeg"
+        }
+      },
+      {
+        "technical": {
+          "room": "Woonkamer",
+          "type": "Verwarming",
+          "malfunction": "Verwarming wordt niet warm.",
+          "testprocedure": "document1.pdf",
+          "approved": false,
+          "commentary": "Controle vergeten bij de buren ivm blokverwarming.",
+          "image_a": "foto7.jpeg",
+          "image_b": "",
+          "image_c": ""
+        }
+      },
+      {
+        "modifications": {
+          "documented": "verslagen-modificaties.pdf",
+          "room": "Slaapkamer",
+          "executed_party": "Huurder",
+          "type": "Kozijn vervangen.",
+          "action_required": "Laten keuren",
+          "commentary": "Netjes afgewerkt, maar voor de zekerheid laten keuren door specialist.",
+          "mod_image1": "foto8.jpeg",
+          "mod_image2": "foto9.jpeg",
+          "mod_image3": ""
+          
+        }
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "date": "2023-02-01",
+    "location": "Talmalaan 50, Schiedam",
+    "report": [
+      {
+        "damage": {
+          "room": "Gang",
+          "new": true,
+          "type": "Geweld",
+          "noticed": "2022-08-30",
+          "action_required": true,
+          "description": "Door huiselijk geweld is de intercom stuk geslagen.",
+          "image_a": "foto10.jpeg",
+          "image_b": "foto11.jpeg",
+          "image_c": ""
+        }
+      },
+      {
+        "maintenance": {
+          "room": "",
+          "type": "",
+          "action_required": false,
+          "estimated_expense": "",
+          "image_a": "",
+          "image_b": "",
+          "image_c": ""
+        }
+      },
+      {
+        "technical": {
+          "room": "",
+          "type": "",
+          "malfunction": "",
+          "testprocedure": "",
+          "approved": false,
+          "commentary": "",
+          "image_a": "",
+          "image_b": "",
+          "image_c": ""
+        }
+      },
+      {
+        "modifications": {
+          "documented": "verslagen-modificaties.pdf",
+          "room": "Gang",
+          "executed_party": "Huurder",
+          "type": "Huurder heeft zelf geprobeerd om de losse draden aan de intercom te installeren.",
+          "action_required": "Laten aanpassen en keuren.",
+          "commentary": "Aan de huurder verteld dat zij voortaan de verhuurder moet benaderen bij een gebreken in de woning.",
+          "mod_image1": "foto12.jpeg",
+          "mod_image2": "",
+          "mod_image3": ""
+          
+        }
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "date": "2023-03-03",
+    "location": "Prins Frederikhendrikstraat 56, Schiedam",
+    "report": [
+      {
+        "damage": {
+          "room": "Zolder",
+          "new": true,
+          "type": "Moedwillig",
+          "noticed": "2023-02-21",
+          "action_required": true,
+          "description": "Buurman van bewoners is het dak op geklommen, waardoor dakpannen gebroken zijn. Een aantal missen. Ook is het dakraam stuk geslagen. Buurman had last van de parkieten op zolder.",
+          "image_a": "foto13.jpeg",
+          "image_b": "foto14.jpeg",
+          "image_c": "foto15.jpeg"
+        }
+      },
+      {
+        "maintenance": {
+          "room": "Keukenramen zijn enkelglas en moeten dubbelglas worden.",
+          "type": "Beglazing",
+          "action_required": true,
+          "estimated_expense": "1500+",
+          "image_a": "foto16.jpeg",
+          "image_b": "foto17.jpeg",
+          "image_c": "foto18.jpeg"
+        }
+      },
+      {
+        "technical": {
+          "room": "Keuken",
+          "type": "Luchtverversing",
+          "malfunction": "Met name tijdens het koken, kan er onvoldoende gelucht worden. De lucht gaat teveel het huis in.",
+          "testprocedure": "document2.pdf",
+          "approved": false,
+          "commentary": "Muren hebben een klein oppervlakte (minder dan 12m2) en de keuken bevindt zich op de eerste verdieping.",
+          "image_a": "foto19.jpeg",
+          "image_b": "foto20.jpeg",
+          "image_c": "foto21.jpeg"
+        }
+      },
+      {
+        "modifications": {
+          "documented": "verslagen-modificaties.pdf",
+          "room": "Bijkamer",
+          "executed_party": "Aannemer",
+          "type": "De aannemer had een luifel laten monteren, echter hangt deze scheef door hevige wind.",
+          "action_required": "Laten verwijderen",
+          "commentary": "Als je in de tuin staat en je kijkt naar de luifel, zie je dat de luifel zwaar misvormd is. Waarschijnlijk is er iets zwaars opgevallen. ",
+          "mod_image1": "foto23.jpeg",
+          "mod_image2": "foto24.jpeg",
+          "mod_image3": "foto25"
+          
+        }
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "date": "2023-04-17",
+    "location": "Burgemeester Honnerlage Gretelaand 403, Schiedam",
+    "report": [
+      {
+        "damage": {
+          "room": "Slaapkamer",
+          "new": true,
+          "type": "Calamiteiten",
+          "noticed": "2023-01-13",
+          "action_required": true,
+          "description": "Vanwege brand in de keuken is er schade door de brandweer ontstaan: een ladder kwam tegen het raam aan, waardoor het kozijn vervangen moet worden.",
+          "image_a": "foto26.jpeg",
+          "image_b": "foto27.jpeg",
+          "image_c": "foto28.jpeg"
+        }
+      },
+      {
+        "maintenance": {
+          "room": "Slaapkamer",
+          "type": "Schilderwerk",
+          "action_required": true,
+          "estimated_expense": "0-500",
+          "image_a": "foto29.jpeg",
+          "image_b": "foto30.jpeg",
+          "image_c": ""
+        }
+      },
+      {
+        "technical": {
+          "room": "Slaapkamer",
+          "type": "Beveiliging",
+          "malfunction": "Beveiligingscamera is defect door de calamiteit.",
+          "testprocedure": "document3.pdf",
+          "approved": true,
+          "commentary": "Het verzoek of beveiligingscamera iets naar boven geplaatst kan worden voor totaal overzicht van die zijde van het huis.",
+          "image_a": "foto31.jpeg",
+          "image_b": "foto32.jpeg",
+          "image_c": ""
+        }
+      },
+      {
+        "modifications": {
+          "documented": "verslagen-modificaties.pdf",
+          "room": "",
+          "executed_party": "",
+          "type": "",
+          "action_required": "",
+          "commentary": "",
+          "mod_image1": "",
+          "mod_image2": "",
+          "mod_image3": ""
+          
+        }
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "date": "2023-04-30",
+    "location": "Valeriusstraat 63, Schiedam",
+    "report": [
+      {
+        "damage": {
+          "room": "Badkamer",
+          "new": false,
+          "type": "Normaal gebruik",
+          "noticed": "2023-04-17",
+          "action_required": true,
+          "description": "Bewoners zijn sinds 17 april verhuisd, maar ontdekte zwarte schimmel aan het plafond van de muur toen zij tegels weghaalde.",
+          "image_a": "foto33.jpeg",
+          "image_b": "",
+          "image_c": ""
+        }
+      },
+      {
+        "maintenance": {
+          "room": "Toilet",
+          "type": "Houtrot",
+          "action_required": true,
+          "estimated_expense": "500-1500",
+          "image_a": "foto34.jpeg",
+          "image_b": "foto35.jpeg",
+          "image_c": "foto36.jpeg"
+        }
+      },
+      {
+        "technical": {
+          "room": "Gang",
+          "type": "Koeling",
+          "malfunction": "Airconditioner ratelt heel hard en komt een muffige geur uit het rooster.",
+          "testprocedure": "document4.pdf",
+          "approved": true,
+          "commentary": "Airconditioner ziet er verouderd uit. ",
+          "image_a": "foto37.jpeg",
+          "image_b": "",
+          "image_c": ""
+        }
+      },
+      {
+        "modifications": {
+          "documented": "verslagen-modificaties.pdf",
+          "room": "Gang",
+          "executed_party": "Onbekend",
+          "type": "De voordeur is vervangen, maar door wie is niet bekend.",
+          "action_required": "Accepteren",
+          "commentary": "Naar eigen inzicht geen mankementen aan de voordeur.",
+          "mod_image1": "foto8.jpeg",
+          "mod_image2": "foto9.jpeg",
+          "mod_image3": ""
+          
+        }
+      }
+    ]
+  }
+]
