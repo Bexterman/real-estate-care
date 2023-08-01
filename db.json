@@ -2,7 +2,7 @@
   "rec_reports": [
     {
       "id": 1,
-      "date": "2023-01-20",
+      "date": "2021-01-20",
       "location": "Burgemeester Knappertlaan 212A, Schiedam",
       "report": [
         {
@@ -175,9 +175,9 @@
       ]
     },
     {
-      "id": 5,
-      "date": "2023-04-17",
-      "location": "Burgemeester Honnerlage Gretelaand 403, Schiedam",
+      "id": 4,
+      "date": "2022-04-17",
+      "location": "Burgemeester Honnerlage Gretelaan 403, Schiedam",
       "report": [
         {
           "damage": {
@@ -186,7 +186,7 @@
             "type": "Calamiteiten",
             "noticed": "2023-01-13",
             "action_required": true,
-            "description": "Vanwege brand in de keuken is er schade door de brandweer ontstaan: een ladder kwam tegen het raam aan, waardoor het kozijn vervangen moet worden.",
+            "description": "Vanwege brand in de keuken is er schade door de brandweer veroorzaakt: een ladder kwam tegen het raam aan, waardoor het kozijn vervangen moet worden.",
             "image_a": "foto26.jpeg",
             "image_b": "foto27.jpeg",
             "image_c": "foto28.jpeg"
