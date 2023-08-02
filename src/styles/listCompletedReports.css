@@ -1,0 +1,71 @@
+/* -----------------## Horizontal Line Styles */
+hr {
+  border: 0;
+  clear: both;
+  display: block;
+  width: 96%;               
+  background-color: var(--rec-tertiaire-color-tr);
+  height: 1px;
+}
+
+/* -----------------## Header Subtitle Styles */
+.main-card-subtitle input {
+  padding: 5px 15px;
+  background: var(--rec-tertiaire-color);
+  width: 100%;
+  max-width: 500px;
+  border-radius: 5px;
+  margin-block-start: 5px;
+  outline: none;
+  border: none;
+  color: var(--rec-primary-color);
+}
+
+.main-card-subtitle ion-icon {
+  position: relative;
+  inset-block-start: 2px;
+  margin-inline-start: 3px;
+  font-size: 1rem;
+}
+
+/* -----------------## Page Content Styles */
+/* ----### Header Styles */
+.main-card-content ion-card-header h2 {
+  background: var(--rec-secondary-color);
+  color: var(--rec-primary-color);
+  font-size: 1.15rem;
+  border-radius: 5px;
+  padding-inline-start: 10px;
+  padding-block: 10px;
+}
+
+/* ----### List Container Styles */
+.main-card-content ul {
+  margin-block-start: 5px;
+  background: var(--rec-tertiaire-color);
+  padding-inline: 10px;
+  border-radius: 5px;
+}
+
+/* ----### List Items Styles */
+.main-card-content li {
+  padding-block: 10px;
+  /* border-block-end: 1px solid white; */
+}
+
+.main-card-content h3 {
+  color: var(--rec-primary-color);
+  font-size: 1.05rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-block-end: 8px;
+}
+
+.main-card-content p {
+  margin-block-end: 8px;
+}
+
+.main-card-content li span {
+  font-weight: bold;
+  margin-inline-end: 3px;
+}
