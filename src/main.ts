@@ -1,7 +1,7 @@
 import { createApp } from 'vue';
 import App from './App.vue';
 import router from './router';
-import store from './store';
+import store from './store/index';
 
 import { IonicVue } from '@ionic/vue';
 
@@ -27,13 +27,13 @@ import './styles/main.css';
 import PageLayout from './components/PageLayout.vue';
 
 
-const app = createApp(App)
-  .use(IonicVue)
-  .use(router)
-  .use(store);
+const app = createApp(App);
+app.use(IonicVue);
+app.use(router);
+app.use(store);
+app.component('page-layout', PageLayout);
 
 router.isReady().then(() => {
   app.mount('#app');
 });
-app.component('page-layout', PageLayout);
   
