@@ -161,7 +161,7 @@ ion-item {
   padding: 10px;
 }
 
-/* ----### Footer Navaigation Styles */
+/* ----### Footer Navigation Styles */
 .footer-nav {
   display: flex;
   justify-content: space-evenly;
@@ -196,6 +196,10 @@ ion-item {
   }
 
 /* -----------------## Footer Styles ##------------------- */
+.footer-icon-wrapper ion-icon {
+  font-size: 24px;
+}
+
   .footer-icon-text {
     font-size: 0.65rem;
   }
@@ -235,6 +239,15 @@ ion-item {
   .logo {
     display: block;
   }
+
+  /* ---------------## Footer Styles ##------------------- */
+  .footer-icon-wrapper ion-icon {
+    font-size: 28px;
+  }
+
+  .footer-icon-text {
+    font-size: .9rem;
+  }
 }
 
 
@@ -247,7 +260,5 @@ ion-item {
     justify-content: space-between;
   }
 
-  .footer-icon-text {
-    font-size: 1rem;
-  }
+
 }
