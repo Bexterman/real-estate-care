@@ -120,9 +120,11 @@
 </template>
 
 <script lang="ts">
+import { defineComponent, ref, computed, onMounted } from 'vue';
+import { useStore } from 'vuex';
+
 import PageLayout from '@/components/PageLayout.vue';
-import axios from 'axios';
-import { defineComponent } from 'vue';
+
 import { IonPage, IonContent, IonCard, IonCardContent, IonCardHeader, IonCardSubtitle, IonCardTitle, IonButton } from '@ionic/vue';
 import { arrowDown } from 'ionicons/icons';
 
@@ -201,43 +203,35 @@ export default defineComponent({
     IonButton
   },
   setup() {
-    return {
-      arrowDown
-    }
-  },
-  data() {
-    return {
-      posts: [] as Reports[], // axios requests
-      loading: true,
-      error: null as string | null,
-      locationSearch: '',
-      idSearch: ''
-    } 
-  },
-  computed: {
-    filteredList() {
-      return this.posts.filter(filteredReport => {
-        const matchedLocation = filteredReport.location.toLowerCase().includes(this.locationSearch.toLowerCase());
-        const matchedId = filteredReport.id.toString().includes(this.idSearch); 
+    const store = useStore();
+    const loading = ref(false);
+    const error = null as string | null;
+    const locationSearch = ref('');
+    const idSearch = ref('');
+
+    onMounted(() => {
+      loading.value = true;
+      store.dispatch('fetchPosts').then(() => {
+        loading.value = false;
+      });
+    });
+
+    const filteredList = computed(() => {
+      return store.getters.sortedPosts.filter((filteredReport: any) => {
+        const matchedLocation = filteredReport.location.toLowerCase().includes(locationSearch.value.toLowerCase());
+        const matchedId = filteredReport.id.toString().includes(idSearch.value);
         return matchedLocation && matchedId;
-      })
-    }
-  },
-  async mounted() {
-    const url = 'https://my-json-server.typicode.com/Bexterman/real-estate-care/db';
-    try {
-      const response = await axios.get(url);
-      this.posts = response.data.rec_reports;
-      this.loading = false;
-    } catch (error) {
-      this.error = 'An error occurred while fetching data.';
-      this.loading = false;
-    }
-    // data sorteren op datum
-    function sortByDate(a: any, b: any) {
-      return new Date(b.date).valueOf() - new Date(a.date).valueOf();
-    }
-    return this.posts.sort(sortByDate);
+      });
+    });
+
+    return {
+      arrowDown,
+      locationSearch,
+      idSearch,
+      filteredList,
+      error,
+      loading
+    };
   }
 });
 </script>
