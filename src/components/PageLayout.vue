@@ -8,7 +8,7 @@
           <div class="wrapper-page-header">
             <!-- Logo -->
             <ion-list class="container-logo" lines="none" color="none">
-              <ion-item class="hover-routerlink" router-link="/home">
+              <ion-item class="hover-routerlink" router-link="/">
                 <img class="logo" src="../assets/logo/logo-icon.png" alt="logo"/>
                 <img class="logo-text" src="../assets/logo/logo-text.png" alt="bedrijfsnaam"/>
               </ion-item>
@@ -39,21 +39,21 @@
 
               <ion-item>
                 <div class="footer-icon-wrapper hover-routerlink">
-                  <ion-icon class="footer-icon" :src="buildOutline" size="large"></ion-icon>
+                  <ion-icon class="footer-icon" :src="buildOutline"></ion-icon>
                   <span class="footer-icon-text">Actieve taak</span>
                 </div>
               </ion-item>
 
               <ion-item>
                 <div class="footer-icon-wrapper hover-routerlink">
-                  <ion-icon class="footer-icon" :src="searchOutline" size="large"></ion-icon>
+                  <ion-icon class="footer-icon" :src="searchOutline"></ion-icon>
                   <span class="footer-icon-text">Zoeken</span>
                 </div>
               </ion-item>
 
               <ion-item>
                 <div class="footer-icon-wrapper hover-routerlink">
-                  <ion-icon class="footer-icon" :src="informationCircleOutline" size="large"></ion-icon>
+                  <ion-icon class="footer-icon" :src="informationCircleOutline"></ion-icon>
                   <span class="footer-icon-text">Informatie</span>
                 </div>
               </ion-item>
