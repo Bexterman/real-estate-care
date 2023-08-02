@@ -1,4 +1,4 @@
-/* -----------------## Horizontal Line Styles */
+/* -----------------## Global Styles */
 hr {
   border: 0;
   clear: both;
@@ -21,25 +21,25 @@ hr {
   color: var(--rec-primary-color);
 }
 
-.main-card-subtitle ion-icon {
-  position: relative;
-  inset-block-start: 2px;
-  margin-inline-start: 3px;
-  font-size: 1rem;
-}
-
 /* -----------------## Page Content Styles */
-/* ----### Header Styles */
+/* ----### Card Header Styles */
 .main-card-content ion-card-header h2 {
   background: var(--rec-secondary-color);
   color: var(--rec-primary-color);
   font-size: 1.15rem;
   border-radius: 5px;
-  padding-inline-start: 10px;
+  padding-inline: 5px;
   padding-block: 10px;
 }
 
-/* ----### List Container Styles */
+.main-card-content ion-card-header h2:active, 
+.main-card-content ion-card-header h2:hover {
+  color: var(--rec-tertiaire-color);
+  background: var(--rec-primary-color);
+  cursor: pointer;
+}
+
+/* ----### Container List Items Styles */
 .main-card-content ul {
   margin-block-start: 5px;
   background: var(--rec-tertiaire-color);
