@@ -4,6 +4,7 @@ http://ionicframework.com/docs/theming/ */
 
 :root {
   --rec-primary-color: #293439;
+  --rec-primary-color-tr: #293439a8;
   --rec-secondary-color: #02d4ca;
   --rec-secondary-color-tr: #00aaa280;
   --rec-tertiaire-color: #dcdcdc;
