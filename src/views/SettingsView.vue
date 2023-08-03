@@ -66,7 +66,7 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, ref, onMounted } from 'vue';
+import { defineComponent, ref } from 'vue';
 import PageLayout from '@/components/PageLayout.vue';
 import { IonPage, IonIcon, IonContent, IonCard, IonToggle, IonButton, IonCardHeader, IonCardTitle, IonCardContent } from '@ionic/vue';
 import { moon, sunny, volumeHigh, volumeMute, notifications, notificationsOff } from 'ionicons/icons'
