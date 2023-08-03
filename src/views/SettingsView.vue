@@ -2,67 +2,118 @@
   <ion-page>
     <page-layout>
 
+      <!-- Content -->
       <ion-content>
-          <div class="main-container">
+        <div class="main-container">
+          <ion-card class="main-card-container">
 
-            <ion-card class="main-card-container">
-              <ion-card-header class="main-card-header">
-                <ion-card-title class="main-card-title">
-                  <h1>Instellingen</h1>
-                </ion-card-title>
-                <ion-card-subtitle class="main-card-subtitle">
-                  <p>Selecteer een optie</p>
-                </ion-card-subtitle>
-              </ion-card-header>
+            <!-- Page Header -->
+            <ion-card-header class="main-card-header">
+              <ion-card-title class="main-card-title">
+                <h1>Instellingen</h1>
+              </ion-card-title>
+            </ion-card-header>
 
-              <ion-card-content class="main-card-content">
-                <h2>Profiel instellingen</h2>
-                <ol>
-                  <li>(iets) aanpassen</li>
-                  <li>(iets) aanpassen</li>
-                  <li>(iets) aanpassen</li>
-                  <li>(iets) aanpassen</li>
-                  <li>(iets) aanpassen</li>
-                  <li>(iets) aanpassen</li>
-                </ol>
-              </ion-card-content>
+            <!-- Main Content -->
+            <ion-card-content class="main-card-content">
+              <article>
+                <header>
+                  <h2>Algemeen</h2>
+                </header>
+                
+                <!-- Notification Settings -->
+                <section>
+                  <header>
+                    <h4>Meldingen</h4>
+                  </header>
+                  <div>
+                    <ion-toggle v-model="notificationsToggleChecked"></ion-toggle>
+                    <ion-icon class="transition-delay" :src="notificationsToggleChecked ? notifications : notificationsOff" :style="{color: notificationsToggleChecked ? '#03c8bf' : ''}"></ion-icon>
+                  </div>
+                </section>
 
-              <ion-card-content class="main-card-content">
-                <h2>Algemene instellingen</h2>
-                <ol>
-                  <li>(iets) aanpassen</li>
-                  <li>(iets) aanpassen</li>
-                  <li>(iets) aanpassen</li>
-                  <li>(iets) aanpassen</li>
-                  <li>(iets) aanpassen</li>
-                  <li>(iets) aanpassen</li>
-                </ol>
-              </ion-card-content>
-            </ion-card>
+                <!-- Sound Settings -->
+                <section>
+                  <header>
+                    <h4>Geluid</h4>
+                  </header>
+                  <div>
+                    <ion-toggle v-model="volumeToggleChecked" :checked="true"></ion-toggle>
+                    <ion-icon class="transition-delay" :src="volumeToggleChecked ? volumeHigh : volumeMute" :style="{color: volumeToggleChecked ? '#03c8bf' : ''}"></ion-icon>
+                  </div>
+                </section>
 
+                <!-- Theme Settings -->
+                <section>
+                  <header>
+                    <h4>Thema</h4>
+                  </header>
+                  <div>
+                    <ion-toggle v-model="themeToggleChecked" :checked="true"></ion-toggle>
+                    <ion-icon class="transition-delay" :src="themeToggleChecked ? sunny : moon" :style="{color: themeToggleChecked ? '#03c8bf' : ''}"></ion-icon>
+                  </div>
+                </section>
+
+              </article>
+            </ion-card-content>
+
+          </ion-card>
           </div>
-        </ion-content>
+      </ion-content>
 
     </page-layout>
   </ion-page>
 </template>
 
 <script lang="ts">
+import { defineComponent, ref, onMounted } from 'vue';
 import PageLayout from '@/components/PageLayout.vue';
-import { defineComponent } from 'vue';
-import { IonPage, IonContent, IonCard, IonCardContent, IonCardHeader, IonCardSubtitle, IonCardTitle } from '@ionic/vue';
+import { IonPage, IonIcon, IonContent, IonCard, IonToggle, IonButton, IonCardHeader, IonCardTitle, IonCardContent } from '@ionic/vue';
+import { moon, sunny, volumeHigh, volumeMute, notifications, notificationsOff } from 'ionicons/icons'
+
 
 export default defineComponent({
-  name: 'SettingsView',
+  name: "SettingsView",
   components: {
-    PageLayout,
     IonPage,
+    IonIcon,
     IonContent,
     IonCard,
-    IonCardContent,
+    IonToggle,
+    IonButton,
     IonCardHeader,
-    IonCardSubtitle,
-    IonCardTitle
-  }
+    IonCardTitle,
+    IonCardContent
+  },
+  setup() {
+    
+    const notificationsIcon = ref(notifications);
+    const volumesIcon = ref(volumeHigh);
+    const themesIcon = ref(sunny);
+
+    const notificationsToggleChecked = ref(true);
+    const volumeToggleChecked = ref(true);
+    const themeToggleChecked = ref(true);
+
+    return {
+      notifications,
+      notificationsOff,
+      volumeMute,
+      volumeHigh,
+      sunny,
+      moon,
+
+      notificationsIcon,
+      volumesIcon,
+      themesIcon,
+
+      notificationsToggleChecked,
+      volumeToggleChecked,
+      themeToggleChecked
+    }
+  },
+  
 });
 </script>
+
+<style src="../styles/settingsView.css"></style>

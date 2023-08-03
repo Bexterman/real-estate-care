@@ -15,10 +15,12 @@
     "@capacitor/core": "^5.1.1",
     "@ionic/vue": "^7.0.0",
     "@ionic/vue-router": "^7.0.0",
+    "@vue/cli": "^5.0.8",
     "axios": "^1.4.0",
     "core-js": "^3.8.3",
     "ionicons": "^7.0.0",
-    "vue": "^3.2.45",
+    "vue": "^3.3.4",
+    "vue-icons": "^2.0.0",
     "vue-router": "^4.1.6",
     "vuex": "^4.0.2"
   },

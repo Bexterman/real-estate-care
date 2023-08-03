@@ -1,0 +1,49 @@
+/* -----------------## Main Content Header Styles */
+.main-card-content header {
+  margin-inline-end: 50px;
+}
+
+/* -----------------## Main Content Section Styles */
+.main-card-content section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 50px;
+  max-width: 220px;
+}
+
+.main-card-content section div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* ----### Toggle Styles */
+
+ion-toggle {
+  padding-block: 5px;
+  padding-inline: 10px;
+  margin-block: 10px;
+}
+
+/* ----### Icon Styles */
+ion-icon {
+  font-size: 1.375rem;
+  margin-inline-start: 20px;
+}
+
+.transition-delay {
+  transition: all 300ms;
+}
+
+@media only screen and (max-width: 300px) {
+ /* ---------------## Page Main Styles ##------------------- */
+  .main-card-container {
+    padding: 10px;
+  }
+
+/* -----------------## Main Content Header Styles */
+  .main-card-content header {
+    margin-inline-end: 10px;
+  }
+}

@@ -36,4 +36,3 @@ app.component('page-layout', PageLayout);
 router.isReady().then(() => {
   app.mount('#app');
 });
-  
