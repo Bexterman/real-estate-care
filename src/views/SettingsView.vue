@@ -28,7 +28,7 @@
                   </header>
                   <div>
                     <ion-toggle v-model="notificationsToggleChecked"></ion-toggle>
-                    <ion-icon class="transition-delay" :src="notificationsToggleChecked ? notifications : notificationsOff" :style="{color: notificationsToggleChecked ? '#03c8bf' : ''}"></ion-icon>
+                    <ion-icon class="settings-view-icon transition-delay" :src="notificationsToggleChecked ? notifications : notificationsOff" :style="{color: notificationsToggleChecked ? '#03c8bf' : ''}"></ion-icon>
                   </div>
                 </section>
 
@@ -39,7 +39,7 @@
                   </header>
                   <div>
                     <ion-toggle v-model="volumeToggleChecked" :checked="true"></ion-toggle>
-                    <ion-icon class="transition-delay" :src="volumeToggleChecked ? volumeHigh : volumeMute" :style="{color: volumeToggleChecked ? '#03c8bf' : ''}"></ion-icon>
+                    <ion-icon class="settings-view-icon  transition-delay" :src="volumeToggleChecked ? volumeHigh : volumeMute" :style="{color: volumeToggleChecked ? '#03c8bf' : ''}"></ion-icon>
                   </div>
                 </section>
 
@@ -50,7 +50,7 @@
                   </header>
                   <div>
                     <ion-toggle v-model="themeToggleChecked" :checked="true"></ion-toggle>
-                    <ion-icon class="transition-delay" :src="themeToggleChecked ? sunny : moon" :style="{color: themeToggleChecked ? '#03c8bf' : ''}"></ion-icon>
+                    <ion-icon class="settings-view-icon  transition-delay" :src="themeToggleChecked ? sunny : moon" :style="{color: themeToggleChecked ? '#03c8bf' : ''}"></ion-icon>
                   </div>
                 </section>
 

@@ -27,7 +27,7 @@ ion-toggle {
 }
 
 /* ----### Icon Styles */
-ion-icon {
+.settings-view-icon  {
   font-size: 1.375rem;
   margin-inline-start: 20px;
 }
