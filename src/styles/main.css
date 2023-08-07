@@ -156,8 +156,13 @@ ion-item {
 }
 
   .header-nav-icon ion-icon {
-    color: var(--accent-1);
+    color: var(--accent-8);
     width: 25px;
+  }
+
+  .header-nav-icon ion-icon:active,
+  .header-nav-icon ion-icon:hover {
+    color: var(--accent-9);
   }
 
 
@@ -178,8 +183,6 @@ ion-item {
   align-items: center;
   width: 1024px;
   background-color: var(--accent-1);
-  color: var(--rec-tertiaire-color);
-  
 }
 
   .footer-icon-wrapper {
@@ -189,7 +192,12 @@ ion-item {
     align-items: center;
     gap: 10px;
     padding: 2px;
-    color: white;
+    color: var(--page-footer-text);
+  }
+
+  .footer-icon-wrapper:active,
+  .footer-icon-wrapper:hover {
+    color: var(--accent-7);
   }
 
 

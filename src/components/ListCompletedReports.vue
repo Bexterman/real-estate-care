@@ -124,6 +124,8 @@
 
                     </ul>
                   </div>
+                  
+                  <hr>
 
                 </ion-card-header>
 
