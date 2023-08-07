@@ -13,7 +13,7 @@
 	--accent-1: #3b4a52; 
 	--accent-2: #ffffff;
 	--accent-3: var(--rec-tertiaire-color);
-	--accent-4: var(--secondary-color-tr);
+	--accent-4: var(--rec-secondary-color-tr);
 }
 
 .themeToggle {
