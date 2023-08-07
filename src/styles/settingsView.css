@@ -30,6 +30,7 @@ ion-toggle {
 .settings-view-icon  {
   font-size: 1.375rem;
   margin-inline-start: 20px;
+  color: var(--rec-primary-color) !important;
 }
 
 .transition-delay {

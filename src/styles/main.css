@@ -14,18 +14,15 @@
   font-family: 'Roboto', 'Verdana', 'Arial', sans-serif;
 }
 
-ion-app,
-ion-page,
-ion-toolbar,
-ion-header {
-  background-color: #fff;
-}
-
 .maximum-width {
   width: 100%;
   height: 100%;
   max-width: 1200px;
   margin: 0 auto;
+}
+
+h1 {
+  color: var(--text-heading-1);
 }
 
 ion-content {
@@ -38,14 +35,13 @@ ion-toolbar {
   box-shadow: 0px 5px 11px -6px rgba(0,0,0,0.75);
 }
 
-
 a {
   text-decoration: none;
 }
 
 ion-button {
   --background: var(--rec-primary-color);
-  --background-actovated: var(--rec-secondary-color);
+  --background-activated: var(--rec-secondary-color);
 }
 
 ion-button:hover {
@@ -65,8 +61,6 @@ ion-button:active {
 ion-item {
   --background: none;
 }
-
-
 
 .hover-routerlink:hover,
 .hover-routerlink:active {
@@ -109,7 +103,7 @@ ion-item {
   .page-fancy-bar {
     width: 100%;
     height: 25px;
-    background-color: var(--rec-primary-color);
+    background-color: var(--accent-1);
   }
 
   .wrapper-page-header {
@@ -117,6 +111,7 @@ ion-item {
     max-width: 1024px;
     margin: 0 auto;
     padding: 10px;
+    background-color: var(--accent-2);
   }
 
 /* ----### Logo Styles */
@@ -126,6 +121,7 @@ ion-item {
   justify-content: center;
   padding-block: 10px 0;
   position: relative;
+  background-color: var(--accent-2);
 }
 
   .logo {
@@ -143,10 +139,11 @@ ion-item {
   display: flex;
   justify-content: space-around;
   align-items: center;
+  background-color: var(--accent-2);
 }
 
   .header-nav-icon ion-icon {
-    color: var(--rec-primary-color);
+    color: var(----accent-1);
     width: 25px;
   }
 
@@ -157,7 +154,7 @@ ion-item {
   justify-content: center;
   align-items: center;
   width: 100%;
-  background-color: var(--rec-primary-color);
+  background-color: var(--accent-1);
   padding: 10px;
 }
 
@@ -167,7 +164,7 @@ ion-item {
   justify-content: space-evenly;
   align-items: center;
   width: 1024px;
-  background-color: var(--rec-primary-color);
+  background-color: var(--accent-1);
   color: var(--rec-tertiaire-color);
   
 }

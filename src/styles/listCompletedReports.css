@@ -24,8 +24,8 @@ hr {
 /* -----------------## Page Content Styles */
 /* ----### Card Header Styles */
 .main-card-content ion-card-header h2 {
-  background: var(--rec-secondary-color);
   color: var(--rec-primary-color);
+  background: var(--accent-3);
   font-size: 1.15rem;
   border-radius: 5px;
   padding-inline: 5px;
@@ -34,15 +34,15 @@ hr {
 
 .main-card-content ion-card-header h2:active, 
 .main-card-content ion-card-header h2:hover {
-  color: var(--rec-tertiaire-color);
-  background: var(--rec-primary-color);
+  color: var(--accent-4);
+  background: var(--accent-3);
   cursor: pointer;
 }
 
 /* ----### Container List Items Styles */
 .main-card-content ul {
   margin-block-start: 5px;
-  background: var(--rec-tertiaire-color);
+  background: var(--accent-3);
   padding-inline: 10px;
   border-radius: 5px;
 }

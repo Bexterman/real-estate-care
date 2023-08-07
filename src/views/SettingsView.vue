@@ -49,7 +49,7 @@
                     <h4>Thema</h4>
                   </header>
                   <div>
-                    <ion-toggle v-model="themeToggleChecked" :checked="true"></ion-toggle>
+                    <ion-toggle v-model="themeToggleChecked" :checked="true"  @click="changeTheme"></ion-toggle>
                     <ion-icon class="settings-view-icon  transition-delay" :src="themeToggleChecked ? sunny : moon" :style="{color: themeToggleChecked ? '#03c8bf' : ''}"></ion-icon>
                   </div>
                 </section>
@@ -112,6 +112,15 @@ export default defineComponent({
       themeToggleChecked
     }
   },
+  methods: {
+    changeTheme(e: any) {
+      if (e.target.checked) {
+        document.body.classList.add("themeToggle"); 
+      } else {
+        document.body.classList.remove("themeToggle");
+      }
+    }
+  }
   
 });
 </script>
