@@ -19,9 +19,13 @@
                 <br><input type="text" v-model="idSearch" placeholder="Typ id nummer">
                 <br><br><label>Zoeken op locatie</label>
                 <br><input type="text" v-model="locationSearch" placeholder="Typ adres en/of postcode..." />
-                <br><br><p><em>Klik op het rapport voor meer informatie</em></p>
               </ion-card-subtitle>
             </ion-card-header>
+
+            <br>
+            <br>
+            <p><em>Klik op het rapport voor meer informatie</em></p>
+            <br>
 
             <!-- Main Content -->
             <div v-for="filteredReport in filteredList" :key="filteredReport.id">

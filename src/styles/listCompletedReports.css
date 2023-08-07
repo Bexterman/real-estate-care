@@ -4,14 +4,21 @@ hr {
   clear: both;
   display: block;
   width: 96%;               
-  background-color: var(--rec-tertiaire-color-tr);
+  background-color: var(--accent-5);
   height: 1px;
+  margin-block: 10px;
 }
+
+/* -----------------## Header Styles */
+.main-card-header {
+  margin-block-end: 15px;
+}
+
 
 /* -----------------## Header Subtitle Styles */
 .main-card-subtitle input {
   padding: 5px 15px;
-  background: var(--rec-tertiaire-color);
+  background: var(--accent-5);
   width: 100%;
   max-width: 500px;
   border-radius: 5px;
@@ -21,12 +28,19 @@ hr {
   color: var(--rec-primary-color);
 }
 
+.main-card-subtitle input:focus {
+  border: 2px solid var(--rec-primary-color);
+}
+
 /* -----------------## Page Content Styles */
+.main-card-content {
+  margin-block-end: 15px;
+}
+
 /* ----### Card Header Styles */
 .main-card-content ion-card-header h2 {
   color: var(--rec-primary-color);
   background: var(--accent-3);
-
   border-radius: 5px;
   padding-inline: 5px;
   padding-block: 10px;
@@ -34,9 +48,13 @@ hr {
 
 .main-card-content ion-card-header h2:active, 
 .main-card-content ion-card-header h2:hover {
-  color: var(--accent-4);
-  background: var(--accent-3);
+  animation: clicked-blink 150ms;
   cursor: pointer;
+}
+
+@keyframes clicked-blink{
+  50% {background-color: var(--accent-2);}
+  100% {background-color: initial;}
 }
 
 /* ----### Container List Items Styles */
@@ -53,11 +71,11 @@ hr {
 }
 
 .main-card-content h3 {
-  color: var(--rec-primary-color);
+  color: var(--accent-7);
   font-size: 1.05rem;
   font-weight: bold;
   text-transform: uppercase;
-  margin-block-end: 8px;
+  margin-block-end: 20px;
 }
 
 .main-card-content p {

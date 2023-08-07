@@ -22,8 +22,13 @@
 }
 
 h1 {
-  color: var(--text-heading-1);
+  color: var(--rec-primary-color);
 }
+
+p {
+  color: var(--accent-6);
+}
+
 
 ion-content {
   --background: var(--rec-tertiaire-color);
@@ -151,7 +156,7 @@ ion-item {
 }
 
   .header-nav-icon ion-icon {
-    color: var(----accent-1);
+    color: var(--accent-1);
     width: 25px;
   }
 

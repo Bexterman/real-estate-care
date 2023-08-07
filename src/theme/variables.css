@@ -8,25 +8,31 @@
   --rec-gradient-color: linear-gradient(to right, #475e6c, #141b1f);
   --ion-background-color:#ffffff;
 
-	--text-heading-1: var(--rec-primary-color);
 
-	--accent-1: #3b4a52; 
+
+	--accent-1: var(--rec-primary-color); 
 	--accent-2: #ffffff;
 	--accent-3: var(--rec-tertiaire-color);
 	--accent-4: var(--rec-secondary-color-tr);
+	--accent-5: var(--rec-tertiaire-color);
+  --accent-6: var(--rec-primary);
+  --accent-7: var(--rec-secondary-color-tr);
 }
 
 .themeToggle {
   --rec-primary-color: #50b6b2;
   --rec-secondary-color-tr: #3c3d3d80;
   --rec-secondary-color: #3b4a52;
-  --rec-tertiaire-color: #545454;
-	--ion-background-color:#1f1f1f;
+  --rec-tertiaire-color: #616161;
+	--ion-background-color:#151515;
 
-	--text-heading-1: var(--accent-2);
+
 
 	--accent-1: #1f1f1f;
 	--accent-2: #9f9f9f;
 	--accent-3: var(--ion-background-color);
 	--accent-4: var(--rec-tertiaire-color);
+	--accent-5: #3b3b3b;
+  --accent-6: var(--accent-2);
+  --accent-7: #c1c1c1;
 }
