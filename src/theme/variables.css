@@ -8,6 +8,7 @@
   --rec-gradient-color: linear-gradient(to right, #475e6c, #141b1f);
   --ion-background-color:#ffffff;
 
+  --page-footer-background: var(--rec-primary-color);
   --page-footer-text: #dcdcdc;
 
 	--accent-1: var(--rec-primary-color); 
@@ -26,9 +27,10 @@
   --rec-secondary-color-tr: #3c3d3d80;
   --rec-secondary-color: #3b4a52;
   --rec-tertiaire-color: #616161;
-	--ion-background-color:#151515;
+	--ion-background-color:#272727;
 
-  --page-footer-text: var(--rec-primary-color);
+  --page-footer-background: var(--accent-2);
+  --page-footer-text: var(--rec-secondary-color);
 
 	--accent-1: #1f1f1f;
 	--accent-2: #9f9f9f;
@@ -36,7 +38,7 @@
 	--accent-4: var(--rec-tertiaire-color);
 	--accent-5: #3b3b3b;
   --accent-6: var(--accent-2);
-  --accent-7: #c1c1c1;
+  --accent-7: var(--rec-primary-color);
   --accent-8: var(--rec-secondary-color);
   --accent-9: var(--rec-primary-color);
 }
