@@ -46,9 +46,11 @@ hr {
   padding-block: 10px;
 }
 
-.main-card-content ion-card-header h2:active, 
-.main-card-content ion-card-header h2:hover {
+.main-card-content ion-card-header h2:active {
   animation: clicked-blink 150ms;
+}
+
+.main-card-content ion-card-header h2:hover {
   cursor: pointer;
 }
 

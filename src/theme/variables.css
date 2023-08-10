@@ -40,5 +40,5 @@
   --accent-6: var(--accent-2);
   --accent-7: var(--rec-primary-color);
   --accent-8: var(--rec-secondary-color);
-  --accent-9: var(--rec-primary-color);
+  --accent-9: #67ddd9;
 }

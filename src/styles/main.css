@@ -1,4 +1,4 @@
-/* -------------------# Fonts #------------------- */
+/* -------------------# Fonts & Stylesheets #------------------- */
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 @import url('../theme/variables.css');
 
@@ -73,8 +73,8 @@ ion-item {
   color: var(--rec-secondary-color);
 }
 
-/* -------------------# Page Layout Styles #------------------- */
-/* ---------------## Header Styles ##------------------- */
+/* -------------------# Page Layout Styles */
+/* ---------------## Header Styles */
 .in-toolbar {
   background: var(--accent-2);
 }
@@ -96,7 +96,6 @@ ion-item {
 
   .wrapper-page-header {
     width: 100%;
-    max-width: 1024px;
     margin: 0 auto;
     padding: 10px;
     background-color: var(--accent-2);
@@ -141,7 +140,7 @@ ion-item {
   }
 
   
-  /* ---------------## Page Main Styles ##------------------- */
+  /* ---------------## Page Main Styles */
 .main-container {
   max-width: 900px;
   margin: 50px auto;
@@ -167,7 +166,7 @@ ion-item {
     }
 
 
-/* -----------------## Footer Styles ##------------------- */
+/* -----------------## Footer Styles */
 .wrapper-page-footer {
   display: flex;
   justify-content: center;
@@ -198,14 +197,14 @@ ion-item {
 
   .footer-icon-wrapper:active,
   .footer-icon-wrapper:hover {
-    color: var(--accent-7);
+    color: var(--accent-9);
   }
 
 
 
 /* -------------------# Media Queries: Mobile First #------------------- */
 @media only screen and (min-width: 180px) {
-/* ---------------## Header Styles ##------------------- */
+/* ---------------## Header Styles */
   .wrapper-page-header {
     padding-block: 0px;
   }
@@ -214,7 +213,7 @@ ion-item {
     margin: 0;
   }
 
-/* -----------------## Footer Styles ##------------------- */
+/* -----------------## Footer Styles */
 .footer-icon-wrapper ion-icon {
   font-size: 24px;
 }
@@ -226,7 +225,7 @@ ion-item {
 
 
 @media only screen and (min-width: 330px) {
-  /* ---------------## Header Styles ##------------------- */
+  /* ---------------## Header Styles */
   .wrapper-page-header {
     display: flex;
     justify-content: space-between;
@@ -242,7 +241,7 @@ ion-item {
     justify-content: flex-start;
     gap: 0;
   }
-  /* -----------------## Footer Styles ##------------------- */
+  /* -----------------## Footer Styles */
   .footer-icon-text {
     font-size: 0.85rem;
   }
@@ -250,7 +249,7 @@ ion-item {
 
 
 @media only screen and (min-width: 400px) {
-  /* ---------------## Header Styles ##------------------- */
+  /* ---------------## Header Styles */
   .wrapper-page-header {
     padding-block-end: 15px;
   }
@@ -259,7 +258,7 @@ ion-item {
     display: block;
   }
 
-  /* ---------------## Footer Styles ##------------------- */
+  /* ---------------## Footer Styles */
   .footer-icon-wrapper ion-icon {
     font-size: 28px;
   }
@@ -272,7 +271,12 @@ ion-item {
 
 
 @media only screen and (min-width: 900px) {
-  /* ---------------## Footer Styles ##------------------- */
+  /* ---------------## Header Styles */
+  .wrapper-page-header {
+    justify-content: space-around;
+  }
+
+  /* ---------------## Footer Styles */
   .footer-nav {
     max-width: 800px;
     margin: 0 auto;
