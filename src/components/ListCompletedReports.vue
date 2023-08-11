@@ -10,7 +10,7 @@
             <!-- Page Header -->
             <ion-card-header class="main-card-header">
               <ion-card-title class="main-card-title">
-                <h1>Rapportages</h1>
+                <h1>Uitgevoerde rapportages</h1>
               </ion-card-title>
 
               <!-- Page Subheader -->

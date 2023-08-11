@@ -2,34 +2,50 @@
   <ion-page>
     <page-layout>
 
-        <ion-content>
-          <div class="main-container">
+      <!-- Content -->
+      <ion-content>
+        <div class="main-container">
+          <ion-card class="main-card-container">
 
-            <ion-card class="main-card-container">
-              <ion-card-header class="main-card-header">
-                <ion-card-title class="main-card-title">
-                  <h1>Toegewezen</h1>
-                </ion-card-title>
-                <ion-card-subtitle class="main-card-subtitle">
-                  <p>Selecteer een optie</p>
-                </ion-card-subtitle>
-              </ion-card-header>
+            <!-- Page Header -->
+            <ion-card-header class="main-card-header">
+              <ion-card-title class="main-card-title">
+                <h1>Toegewezen rapportages</h1>
+              </ion-card-title>
 
-              <ion-card-content class="main-card-content">
-                <h2>Overzicht</h2>
-                <ol>
-                  <li>Appointment</li>
-                  <li>Appointment</li>
-                  <li>Appointment</li>
-                  <li>Appointment</li>
-                  <li>Appointment</li>
-                  <li>Appointment</li>
-                </ol>
-              </ion-card-content>
-            </ion-card>
+              <!-- Page Subtitle -->
+              <ion-card-subtitle class="main-card-subtitle">
+                <p><em>Tik/klik op een regel</em></p>
+              </ion-card-subtitle>
 
-          </div>
-        </ion-content>
+            </ion-card-header>
+
+            <ion-card-content class="main-card-content">
+              <!-- Forms Reports -->
+              <form action="#">
+                
+                <!-- Form Global Information -->
+                  <form-global></form-global>
+
+                  <!-- Form Damage Report -->
+                  <form-damage></form-damage>
+
+                  <!-- Form Maintenance Report -->
+
+
+                  <!-- Form Tehcnical Report -->
+
+                  
+                  <!-- Form Modifications Report -->
+
+                <ion-button type="submit" expand="block">Verzend</ion-button>
+              </form>
+              
+
+            </ion-card-content>
+          </ion-card>
+        </div>
+      </ion-content>
 
     </page-layout>
   </ion-page>
@@ -37,22 +53,28 @@
 
 <script lang="ts">
 import PageLayout from '@/components/PageLayout.vue';
+import FormGlobal from '@/components/FormGlobal.vue';
+import FormDamage from '@/components/FormDamage.vue';
+
 import { defineComponent } from 'vue';
-import { IonPage, IonContent, IonCard, IonCardContent, IonCardHeader, IonCardSubtitle, IonCardTitle } from '@ionic/vue';
+import { IonButton, IonPage, IonContent, IonCard, IonCardHeader, IonCardTitle, IonCardSubtitle, IonCardContent} from '@ionic/vue';
 
 export default defineComponent({
   name: 'AssignedView',
   components: {
     PageLayout,
     IonPage,
-    IonContent,
+    FormGlobal,
+    FormDamage,
     IonCard,
-    IonCardContent,
+    IonContent,
     IonCardHeader,
+    IonCardTitle,
     IonCardSubtitle,
-    IonCardTitle
+    IonCardContent,
+    IonButton
   }
 });
 </script>
 
-<style></style>
+<style src="../styles/assignedView.css"></style>
