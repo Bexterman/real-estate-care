@@ -1,5 +1,12 @@
 
 /* -----------------## Global Styles */
+.form-error {
+  color: red;
+  font-style: italic;
+  font-size: smaller;
+  padding-block-end: 5px;
+}
+
 .main-card-content form header {
   margin-block-start: 30px;
 }
@@ -9,7 +16,7 @@ ion-button {
 }
 
 /* -----------------## Form Styles */
-.assigned-view-form-input {
+.form-input {
   --highlight-color-focused: var(--accent-10);
   color: var(--rec-primary-color);
 }
@@ -19,7 +26,15 @@ ion-radio-group {
   margin-block: 10px;
 }
 
+ion-radio-group span {
+  color: var(--rec-primary-color);
+}
+
 ion-radio {
   --size: 18px;
   --color-checked: var(--accent-9);
+  color: var(--rec-primary-color);
+  padding-inline-start: 20px;
+  display: block;
+  margin-block: 10px;
 }
