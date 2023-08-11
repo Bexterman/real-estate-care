@@ -8,27 +8,38 @@
 
       <!-- Location -->
       <ion-item>
-        <ion-input class="assigned-view-form-input" label="Locatie:" :value="inputModel" @ionInput="onInput($event)" ref="ionInputEl" labelPlacement="floating" placeholder="Woonkamer, vergaderruimte, balkon, etc."></ion-input>
+        <v-field name="dmg_location" v-slot={field} :rules="isRequired">
+          <ion-input v-bind="field" name="dmg_location" class="form-input" label="Locatie:" :value="inputModel" @ionInput="onInput($event)" ref="ionInputEl" labelPlacement="floating" placeholder="Woonkamer, vergaderruimte, balkon, etc."></ion-input>
+        </v-field>
       </ion-item>
+    <v-error-message name="dmg_location" class="form-error"/>
 
       <!-- New -->
       <ion-item>
-        <ion-radio-group allow-empty-selection>
-          <ion-radio value="true">Nieuwe schade:</ion-radio>
-        </ion-radio-group>
+        <v-field name="dmg_new" v-slot={field} :rules="isRequired">
+          <ion-radio-group v-bind="field" name="dmg_new" class="form-input"><span>Nieuwe schade:</span>
+            <ion-radio value="true">ja</ion-radio>
+            <ion-radio value="false">nee</ion-radio>
+          </ion-radio-group>
+        </v-field>
       </ion-item>
+    <v-error-message name="dmg_location" class="form-error"/>
 
       <!-- Type -->
       <ion-item>
-        <ion-select label="Soort schade" label-placement="floating" justify="start">
-          <ion-select-option value="moedwillig">Moedwillig</ion-select-option>
-          <ion-select-option value="slijtage">Slijtage</ion-select-option>
-          <ion-select-option value="geweld">Geweld</ion-select-option>
-          <ion-select-option value="normaal-gebruik">Normaal gebruik</ion-select-option>
-          <ion-select-option value="calamiteit">Calamiteit</ion-select-option>
-          <ion-select-option value="anders">Anders</ion-select-option>
-        </ion-select>
+        <v-field name="dmg_type" v-slot={field} :rules="isRequired">
+          <ion-select v-bind="field" label="Soort schade" label-placement="floating" class="form-input" justify="start">
+            <ion-select-option v-bind="field" name="moedwillig" value="Moedwillig">Moedwillig</ion-select-option>
+            <ion-select-option v-bind="field" name="slijtage" value="Slijtage">Slijtage</ion-select-option>
+            <ion-select-option v-bind="field" name="geweld" value="Geweld">Geweld</ion-select-option>
+            <ion-select-option v-bind="field" name="normaal-gebruik" value="Normaal gebruik">Normaal gebruik</ion-select-option>
+            <ion-select-option v-bind="field" name="calamiteit" value="Calamiteit">Calamiteit</ion-select-option>
+            <ion-select-option v-bind="field" name="anders" value="Anders">Anders</ion-select-option>
+          </ion-select>
+        </v-field>
       </ion-item>
+    <v-error-message name="dmg-type" class="form-error"/>
+
       
     </ion-list>
 </template>
@@ -36,6 +47,7 @@
 <script lang="ts">
 import { defineComponent, ref } from 'vue';
 import { IonItem, IonInput, IonList, IonRadio, IonRadioGroup, IonSelect, IonSelectOption } from '@ionic/vue';
+import * as V from 'vee-validate/dist/vee-validate';
 
 export default defineComponent({
 name: 'FormDamage',
@@ -46,25 +58,42 @@ components: {
   IonRadio,
   IonRadioGroup,
   IonSelect,
-  IonSelectOption
+  IonSelectOption,
+  VField : V.Field,
+  VErrorMessage : V.ErrorMessage,
 },
 setup() {
-const ionInputEl = ref();
-const inputModel = ref('');
-const onInput = (ev: any) => {
-const value = ev.target!.value;
+    // field validations
+    const isRequired = (value: any) => {
+      console.log("isRequired", value);
+      if (!value) {
+        return "vereist veld";
+      }
 
-const filteredValue = value.replace(/[^a-zA-Z0-9\,\s]/g, '');
+      return true;
+    }
+  
+    const ionInputEl = ref();
+    const inputModel = ref('');
+    const onInput = (ev: any) => {
+    const value = ev.target!.value;
 
-inputModel.value = filteredValue;
+    const filteredValue = value.replace(/[^a-zA-Z0-9\,\s]/g, '');
 
-const inputCmp = ionInputEl.value;
-if (inputCmp !== undefined) {
-    inputCmp.$el.value = filteredValue;
-  }
-};
+    inputModel.value = filteredValue;
 
-return { ionInputEl, inputModel, onInput };
+    const inputCmp = ionInputEl.value;
+    if (inputCmp !== undefined) {
+        inputCmp.$el.value = filteredValue;
+      }
+    };
+
+    return {
+      ionInputEl,
+      inputModel,
+      onInput,
+      isRequired
+    };
 },
 });
 </script>

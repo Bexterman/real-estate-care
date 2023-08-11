@@ -1,53 +1,81 @@
 <template>
-    <header>
-      <h2>Algemene informatie</h2>
-    </header>
+  <header>
+    <h2>Algemene informatie</h2>
+  </header>
+
+  <ion-list class="assigned-view-form-list">
+
+    <ion-item>
+      <v-field name="id" v-slot={field} :rules="isRequired">
+        <ion-input v-bind="field" name="id" class="form-input" label="Identificatienummer:" labelPlacement="floating" type="number"  placeholder="Geef een unieke code"></ion-input>
+      </v-field>
+    </ion-item>
+    <v-error-message name="id" class="form-error"/>
+
+    <ion-item>
+      <v-field name="date" v-slot={field} :rules="isRequired">
+        <ion-input v-bind="field" class="form-input" label="Aanmaakdatum:" labelPlacement="floating" type="date"></ion-input>
+      </v-field>
+    </ion-item>
+    <v-error-message name="date" class="form-error"/>
+
+
+    <ion-item>
+      <v-field name="address" v-slot={field} :rules="isRequired">
+        <ion-input v-bind="field" name="address" class="form-input" label="Adres:" labelPlacement="floating" placeholder="Voorbeeldstraat 12A, 3456BC Alfabetstad"></ion-input>
+      </v-field>
+    </ion-item>
+    <v-error-message name="address" class="form-error"/>
     
-    <ion-list class="assigned-view-form-list">
-
-      <ion-item>
-        <ion-input class="assigned-view-form-input" label="Identificatienummer:" labelPlacement="floating" type="number" :readonly="true" placeholder="" value="6"></ion-input>
-      </ion-item>
-
-      <ion-item>
-        <ion-input class="assigned-view-form-input" label="Aanmaakdatum:" labelPlacement="floating" type="date"></ion-input>
-      </ion-item>
-
-      <ion-item>
-        <ion-input class="assigned-view-form-input" label="Adres:" :value="inputModel" @ionInput="onInput($event)" ref="ionInputEl" labelPlacement="floating" placeholder="Voorbeeldstraat 12A, 3456BC Alfabetstad"></ion-input>
-      </ion-item>
-      
-    </ion-list>
+  </ion-list>
 </template>
 
 <script lang="ts">
 import { defineComponent, ref } from 'vue';
 import { IonItem, IonInput, IonList } from '@ionic/vue';
+import * as V from 'vee-validate/dist/vee-validate';
 
 export default defineComponent({
 name: 'FormGlobal',
 components: {
-IonItem,
-IonInput,
-IonList,
+  IonItem,
+  IonInput,
+  IonList,
+  VField : V.Field,
+  VErrorMessage : V.ErrorMessage,
 },
-setup() {
-const ionInputEl = ref();
-const inputModel = ref('');
-const onInput = (ev: any) => {
-const value = ev.target!.value;
+  setup() {
+    // field validations
+    const isRequired = (value: any) => {
+      console.log("isRequired", value);
+      if (!value) {
+        return "vereist veld";
+      }
 
-const filteredValue = value.replace(/[^a-zA-Z0-9\,\s]/g, '');
+      return true;
+    }
+  
+    const ionInputEl = ref();
+    const inputModel = ref('');
+    const onInput = (ev: any) => {
+    const value = ev.target!.value;
 
-inputModel.value = filteredValue;
+    const filteredValue = value.replace(/[^a-zA-Z0-9\,\s]/g, '');
 
-const inputCmp = ionInputEl.value;
-if (inputCmp !== undefined) {
-    inputCmp.$el.value = filteredValue;
-  }
-};
+    inputModel.value = filteredValue;
 
-return { ionInputEl, inputModel, onInput };
+    const inputCmp = ionInputEl.value;
+    if (inputCmp !== undefined) {
+        inputCmp.$el.value = filteredValue;
+      }
+    };
+
+    return {
+      ionInputEl,
+      inputModel,
+      onInput,
+      isRequired
+    };
 },
 });
 </script>

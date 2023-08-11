@@ -22,14 +22,13 @@
 
             <ion-card-content class="main-card-content">
               <!-- Forms Reports -->
-              <form action="#">
+              <v-form v-slot="{ values, errors }" @submit="onSubmit">
                 
                 <!-- Form Global Information -->
-                  <form-global></form-global>
+                    <form-global></form-global>
 
                   <!-- Form Damage Report -->
-                  <form-damage></form-damage>
-
+                    <form-damage></form-damage>
                   <!-- Form Maintenance Report -->
 
 
@@ -38,8 +37,15 @@
                   
                   <!-- Form Modifications Report -->
 
-                <ion-button type="submit" expand="block">Verzend</ion-button>
-              </form>
+                  <ion-button type="submit" expand="block">Verzend</ion-button>
+                  
+                <div> 
+                  <h4>Values</h4>
+                    <p>{{ values }}</p>
+                  <h4>Errors</h4>
+                    <p>{{ errors }}</p>
+                </div>
+              </v-form>
               
 
             </ion-card-content>
@@ -57,7 +63,8 @@ import FormGlobal from '@/components/FormGlobal.vue';
 import FormDamage from '@/components/FormDamage.vue';
 
 import { defineComponent } from 'vue';
-import { IonButton, IonPage, IonContent, IonCard, IonCardHeader, IonCardTitle, IonCardSubtitle, IonCardContent} from '@ionic/vue';
+import * as V from 'vee-validate/dist/vee-validate';
+import { IonButton, IonPage, IonContent, IonCard, IonCardHeader, IonCardTitle, IonCardSubtitle, IonCardContent, IonInput, IonList, IonItem } from '@ionic/vue';
 
 export default defineComponent({
   name: 'AssignedView',
@@ -72,7 +79,18 @@ export default defineComponent({
     IonCardTitle,
     IonCardSubtitle,
     IonCardContent,
-    IonButton
+    IonButton,
+    VForm : V.Form,
+  },
+  setup() {
+    const onSubmit = (data: any) => {
+      alert("ON SUBMIT" + JSON.stringify(data, null, 2));
+    };
+
+
+    return {
+      onSubmit,
+    }
   }
 });
 </script>
