@@ -7,7 +7,7 @@
       "report": [
         {
           "damage": {
-            "room": "Keuken",
+            "location": "Keuken",
             "new": true,
             "type": "Slijtage",
             "noticed": "2022-12-05",
@@ -20,7 +20,7 @@
         },
         {
           "maintenance": {
-            "room": "Woonkamer",
+            "location": "Woonkamer",
             "type": "Elektra",
             "action_required": true,
             "estimated_expense": "500-1500",
@@ -31,7 +31,7 @@
         },
         {
           "technical": {
-            "room": "Woonkamer",
+            "location": "Woonkamer",
             "type": "Verwarming",
             "malfunction": "Verwarming wordt niet warm.",
             "testprocedure": "document1.pdf",
@@ -45,7 +45,7 @@
         {
           "modifications": {
             "documented": "verslagen-modificaties.pdf",
-            "room": "Slaapkamer",
+            "location": "Slaapkamer",
             "executed_party": "Huurder",
             "type": "Kozijn vervangen.",
             "action_required": "Laten keuren",
@@ -65,7 +65,7 @@
       "report": [
         {
           "damage": {
-            "room": "Gang",
+            "location": "Gang",
             "new": true,
             "type": "Geweld",
             "noticed": "2022-08-30",
@@ -78,7 +78,7 @@
         },
         {
           "maintenance": {
-            "room": "",
+            "location": "",
             "type": "",
             "action_required": false,
             "estimated_expense": "",
@@ -89,7 +89,7 @@
         },
         {
           "technical": {
-            "room": "",
+            "location": "",
             "type": "",
             "malfunction": "",
             "testprocedure": "",
@@ -103,7 +103,7 @@
         {
           "modifications": {
             "documented": "verslagen-modificaties.pdf",
-            "room": "Gang",
+            "location": "Gang",
             "executed_party": "Huurder",
             "type": "Huurder heeft zelf geprobeerd om de losse draden aan de intercom te installeren.",
             "action_required": "Laten aanpassen en keuren.",
@@ -123,7 +123,7 @@
       "report": [
         {
           "damage": {
-            "room": "Zolder",
+            "location": "Zolder",
             "new": true,
             "type": "Moedwillig",
             "noticed": "2023-02-21",
@@ -136,7 +136,7 @@
         },
         {
           "maintenance": {
-            "room": "Keukenramen zijn enkelglas en moeten dubbelglas worden.",
+            "location": "Keukenramen zijn enkelglas en moeten dubbelglas worden.",
             "type": "Beglazing",
             "action_required": true,
             "estimated_expense": "1500+",
@@ -147,7 +147,7 @@
         },
         {
           "technical": {
-            "room": "Keuken",
+            "location": "Keuken",
             "type": "Luchtverversing",
             "malfunction": "Met name tijdens het koken, kan er onvoldoende gelucht worden. De lucht gaat teveel het huis in.",
             "testprocedure": "document2.pdf",
@@ -161,7 +161,7 @@
         {
           "modifications": {
             "documented": "verslagen-modificaties.pdf",
-            "room": "Bijkamer",
+            "location": "Bijkamer",
             "executed_party": "Aannemer",
             "type": "De aannemer had een luifel laten monteren, echter hangt deze scheef door hevige wind.",
             "action_required": "Laten verwijderen",
@@ -181,7 +181,7 @@
       "report": [
         {
           "damage": {
-            "room": "Slaapkamer",
+            "location": "Slaapkamer",
             "new": true,
             "type": "Calamiteiten",
             "noticed": "2023-01-13",
@@ -194,7 +194,7 @@
         },
         {
           "maintenance": {
-            "room": "Slaapkamer",
+            "location": "Slaapkamer",
             "type": "Schilderwerk",
             "action_required": true,
             "estimated_expense": "0-500",
@@ -205,7 +205,7 @@
         },
         {
           "technical": {
-            "room": "Slaapkamer",
+            "location": "Slaapkamer",
             "type": "Beveiliging",
             "malfunction": "Beveiligingscamera is defect door de calamiteit.",
             "testprocedure": "document3.pdf",
@@ -219,7 +219,7 @@
         {
           "modifications": {
             "documented": "verslagen-modificaties.pdf",
-            "room": "",
+            "location": "",
             "executed_party": "",
             "type": "",
             "action_required": "",
@@ -239,7 +239,7 @@
       "report": [
         {
           "damage": {
-            "room": "Badkamer",
+            "location": "Badkamer",
             "new": false,
             "type": "Normaal gebruik",
             "noticed": "2023-04-17",
@@ -252,7 +252,7 @@
         },
         {
           "maintenance": {
-            "room": "Toilet",
+            "location": "Toilet",
             "type": "Houtrot",
             "action_required": true,
             "estimated_expense": "500-1500",
@@ -263,7 +263,7 @@
         },
         {
           "technical": {
-            "room": "Gang",
+            "location": "Gang",
             "type": "Koeling",
             "malfunction": "Airconditioner ratelt heel hard en komt een muffige geur uit het rooster.",
             "testprocedure": "document4.pdf",
@@ -277,7 +277,7 @@
         {
           "modifications": {
             "documented": "verslagen-modificaties.pdf",
-            "room": "Gang",
+            "location": "Gang",
             "executed_party": "Onbekend",
             "type": "De voordeur is vervangen, maar door wie is niet bekend.",
             "action_required": "Accepteren",
