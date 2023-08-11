@@ -20,6 +20,7 @@
   --accent-7: var(--rec-secondary-color-tr);
   --accent-8: var(--rec-primary-color);
   --accent-9: var(--rec-secondary-color);
+  --accent-10: var(--rec-secondary-color);
 }
 
 .themeToggle {
@@ -41,4 +42,5 @@
   --accent-7: var(--rec-primary-color);
   --accent-8: var(--rec-secondary-color);
   --accent-9: #67ddd9;
+  --accent-10: var(--accent-2);
 }

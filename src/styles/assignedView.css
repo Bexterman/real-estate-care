@@ -1,0 +1,25 @@
+
+/* -----------------## Global Styles */
+.main-card-content form header {
+  margin-block-start: 30px;
+}
+
+ion-button {
+  margin-block-start: 30px;
+}
+
+/* -----------------## Form Styles */
+.assigned-view-form-input {
+  --highlight-color-focused: var(--accent-10);
+  color: var(--rec-primary-color);
+}
+
+/* ----### Radio Button Styles */
+ion-radio-group {
+  margin-block: 10px;
+}
+
+ion-radio {
+  --size: 18px;
+  --color-checked: var(--accent-9);
+}
