@@ -3,56 +3,56 @@
     {
       "id": 1,
       "date": "2021-01-20",
-      "location": "Burgemeester Knappertlaan 212A, 3333LO Rotterdam",
+      "address": "Burgemeester Knappertlaan 212A, 3333LO Rotterdam",
       "report": [
         {
           "damage": {
-            "location": "Keuken",
-            "new": true,
-            "type": "Slijtage",
-            "noticed": "2022-12-05",
-            "action_required": true,
-            "description": "Gat in de vloer te zien, vermoeden van slijtage steunbalk. Woning gebouwd in 1916.",
-            "image_a": "foto1.jpeg",
-            "image_b": "foto2.jpeg",
-            "image_c": "foto3.jpeg"
+            "dmg_location": "Keuken",
+            "dmg_new": true,
+            "dmg_type": "Slijtage",
+            "dmg_noticed": "2022-12-05",
+            "dmg_action_required": true,
+            "dmg_description": "Gat in de vloer te zien, vermoeden van slijtage steunbalk. Woning gebouwd in 1916.",
+            "dmg_image_a": "foto1.jpeg",
+            "dmg_image_b": "foto2.jpeg",
+            "dmg_image_c": "foto3.jpeg"
           }
         },
         {
           "maintenance": {
-            "location": "Woonkamer",
-            "type": "Elektra",
-            "action_required": true,
-            "estimated_expense": "500-1500",
-            "image_a": "foto4.jpeg",
-            "image_b": "foto5.jpeg",
-            "image_c": "foto6.jpeg"
+            "mtc_location": "Woonkamer",
+            "mtc_type": "Elektra",
+            "mtc_action_required": true,
+            "mtc_estimated_expense": "500-1500",
+            "mtc_image_a": "foto4.jpeg",
+            "mtc_image_b": "foto5.jpeg",
+            "mtc_image_c": "foto6.jpeg"
           }
         },
         {
           "technical": {
-            "location": "Woonkamer",
-            "type": "Verwarming",
-            "malfunction": "Verwarming wordt niet warm.",
-            "testprocedure": "document1.pdf",
-            "approved": false,
-            "commentary": "Controle vergeten bij de buren ivm blokverwarming.",
-            "image_a": "foto7.jpeg",
-            "image_b": "",
-            "image_c": ""
+            "tch_location": "Woonkamer",
+            "tch_type": "Verwarming",
+            "tch_malfunction": "Verwarming wordt niet warm.",
+            "tch_testprocedure": "document1.pdf",
+            "tch_approved": false,
+            "tch_commentary": "Controle vergeten bij de buren ivm blokverwarming.",
+            "tch_image_a": "foto7.jpeg",
+            "tch_image_b": "",
+            "tch_image_c": ""
           }
         },
         {
           "modifications": {
-            "documented": "verslagen-modificaties.pdf",
-            "location": "Slaapkamer",
-            "executed_party": "Huurder",
-            "type": "Kozijn vervangen.",
-            "action_required": "Laten keuren",
-            "commentary": "Netjes afgewerkt, maar voor de zekerheid laten keuren door specialist.",
-            "mod_image1": "foto8.jpeg",
-            "mod_image2": "foto9.jpeg",
-            "mod_image3": ""
+            "mfs_documented": "verslagen-modificaties.pdf",
+            "mfs_location": "Slaapkamer",
+            "mfs_executed_party": "Huurder",
+            "mfs_type": "Kozijn vervangen.",
+            "mfs_action_required": "Laten keuren",
+            "mfs_commentary": "Netjes afgewerkt, maar voor de zekerheid laten keuren door specialist.",
+            "mfs_mod_image1": "foto8.jpeg",
+            "mfs_mod_image2": "foto9.jpeg",
+            "mfs_mod_image3": ""
             
           }
         }
