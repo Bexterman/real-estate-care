@@ -13,7 +13,7 @@
 
       <!-- New -->
       <ion-item>
-        <ion-radio-group allow-empty-selection="true">
+        <ion-radio-group allow-empty-selection>
           <ion-radio value="true">Nieuwe schade:</ion-radio>
         </ion-radio-group>
       </ion-item>
