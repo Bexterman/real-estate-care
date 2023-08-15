@@ -5,10 +5,6 @@
   letter-spacing: .6px;
 }
 
-ion-item {
-  font-size: small;
-}
-
 .form-error {
   color: red;
   font-style: italic;
