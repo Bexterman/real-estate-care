@@ -1,7 +1,7 @@
 <template>
   <!-- Form Damage Report -->
     <header>
-      <h2 class="form-heading">Schade rapportage</h2>
+      <h2 class="form-heading">Schade opnemen</h2>
     </header>
     
     <ion-list>
@@ -38,7 +38,7 @@
           </ion-select>
         </v-field>
       </ion-item>
-    <v-error-message name="dmg-type" class="form-error"/>
+    <v-error-message name="dmg_type" class="form-error"/>
 
       
     </ion-list>
@@ -65,7 +65,6 @@ components: {
 setup() {
     // field validations
     const isRequired = (value: any) => {
-      console.log("isRequired", value);
       if (!value) {
         return "vereist veld";
       }

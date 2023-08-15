@@ -14,39 +14,76 @@
               </ion-card-title>
 
               <!-- Page Subtitle -->
-              <ion-card-subtitle class="main-card-subtitle">
+              <!-- <ion-card-subtitle class="main-card-subtitle">
                 <p><em>Tik/klik op een regel</em></p>
-              </ion-card-subtitle>
+              </ion-card-subtitle> -->
 
             </ion-card-header>
 
             <ion-card-content class="main-card-content">
+              <!-- Create Form -->
+              <ion-button @click="toggleForm">Rapportage opmaken</ion-button>
+
               <!-- Forms Reports -->
-              <v-form v-slot="{ values, errors }" @submit="onSubmit">
-                
+              <v-form v-if="showForm" @submit="onSubmit">
+
                 <!-- Form Global Information -->
-                    <form-global></form-global>
+                <form-global></form-global>
+
+                <!-- Select Forms -->
+                <ion-select v-model="selectedFormOption">
+                  <ion-select-option value="disabled">kies een formulier</ion-select-option>
+                  <ion-select-option value="formDamage">Schade opnemen</ion-select-option>
+                  <ion-select-option value="all">Alle formulieren</ion-select-option>
+                </ion-select>
 
                   <!-- Form Damage Report -->
-                    <form-damage></form-damage>
+                  <form-damage v-if="selectedFormOption === 'formDamage'"></form-damage>
+                  <form-damage v-if="selectedFormOption === 'all'"></form-damage>
+
                   <!-- Form Maintenance Report -->
 
 
                   <!-- Form Tehcnical Report -->
 
-                  
+                    
                   <!-- Form Modifications Report -->
 
-                  <ion-button type="submit" expand="block">Verzend</ion-button>
-                  
-                <div> 
-                  <h4>Values</h4>
-                    <p>{{ values }}</p>
-                  <h4>Errors</h4>
-                    <p>{{ errors }}</p>
-                </div>
+                <ion-button type="submit" expand="block">Verzend</ion-button>
               </v-form>
-              
+
+              <!-- Overview Submitted Reports -->
+              <br>
+              <br>
+              <br>
+              <br>
+              <div v-if="formSubmissions.length > 0">
+                <header>
+                  <h2>Overzicht toegewezen rapportages</h2>
+                </header>
+                <div v-for="(submission, index) in formSubmissions" :key="index">
+                  <header>
+                    <h3>#{{ submission.id + ' | ' + submission.address }}</h3>
+                    <sub>Opmaakdatum: {{ submission.date }}</sub>
+                  </header>
+                  <br>
+                  <ul>
+
+                    <!-- Damage Report -->
+                    <li>
+                      <header>
+                        <h4>Beschadiging</h4>
+                      </header>
+                      <p><span>Locatie:</span> {{ submission.dmg_location }}</p> 
+                      <p><span>Type schade:</span> {{ submission.dmg_new }}</p>
+                      <p><span>Nieuwe schade:</span> {{ submission.dmg_type }}</p>
+                    </li>
+                  </ul>
+                  <br>
+                  <br>
+                  <br>
+                </div>
+              </div>
 
             </ion-card-content>
           </ion-card>
@@ -62,9 +99,9 @@ import PageLayout from '@/components/PageLayout.vue';
 import FormGlobal from '@/components/FormGlobal.vue';
 import FormDamage from '@/components/FormDamage.vue';
 
-import { defineComponent } from 'vue';
+import { defineComponent, ref, Ref } from 'vue';
 import * as V from 'vee-validate/dist/vee-validate';
-import { IonButton, IonPage, IonContent, IonCard, IonCardHeader, IonCardTitle, IonCardSubtitle, IonCardContent, IonInput, IonList, IonItem } from '@ionic/vue';
+import { IonSelect, IonSelectOption, IonButton, IonPage, IonContent, IonCard, IonCardHeader, IonCardTitle, IonCardSubtitle, IonCardContent, IonInput, IonList, IonItem } from '@ionic/vue';
 
 export default defineComponent({
   name: 'AssignedView',
@@ -80,18 +117,32 @@ export default defineComponent({
     IonCardSubtitle,
     IonCardContent,
     IonButton,
+    IonSelect,
+    IonSelectOption,
     VForm : V.Form,
   },
   setup() {
+    const selectedFormOption = ref('disabled');
+    const showForm = ref(false);
+    const formSubmissions: Ref<any[]> = ref([]);
+
     const onSubmit = (data: any) => {
+      formSubmissions.value.push(data);
       alert("ON SUBMIT" + JSON.stringify(data, null, 2));
     };
 
+    const toggleForm = () => {
+    showForm.value = !showForm.value;
+  };
 
     return {
       onSubmit,
+      selectedFormOption,
+      showForm,
+      toggleForm,
+      formSubmissions,
     }
-  }
+  },
 });
 </script>
 

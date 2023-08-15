@@ -14,7 +14,7 @@
 
     <ion-item>
       <v-field name="date" v-slot={field} :rules="isRequired">
-        <ion-input v-bind="field" class="form-input" label="Aanmaakdatum:" labelPlacement="floating" type="date"></ion-input>
+        <ion-input v-bind="field" class="form-input" label="Opmaakdatum:" labelPlacement="floating" type="date"></ion-input>
       </v-field>
     </ion-item>
     <v-error-message name="date" class="form-error"/>
@@ -47,7 +47,6 @@ components: {
   setup() {
     // field validations
     const isRequired = (value: any) => {
-      console.log("isRequired", value);
       if (!value) {
         return "vereist veld";
       }
