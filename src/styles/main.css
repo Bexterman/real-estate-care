@@ -180,7 +180,7 @@ ion-item {
 /* ----### Footer Navigation Styles */
 .footer-nav {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
   align-items: center;
   width: 1024px;
   background-color: var(--page-footer-background);
@@ -277,7 +277,6 @@ ion-item {
   .footer-nav {
     max-width: 800px;
     margin: 0 auto;
-    justify-content: space-between;
   }
 
 
