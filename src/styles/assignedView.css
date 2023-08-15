@@ -37,7 +37,7 @@ ion-radio-group span {
 
 ion-radio {
   --size: 18px;
-  --color-checked: var(--accent-9);
+  --color-checked: var(--rec-primary-color);
   --color: var(--rec-primary-color);
   color: var(--accent-10);
   padding-inline-start: 20px;
