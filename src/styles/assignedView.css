@@ -1,5 +1,14 @@
 
 /* -----------------## Global Styles */
+.form-heading {
+  color: var(--accent-10);
+  letter-spacing: .6px;
+}
+
+ion-item {
+  font-size: small;
+}
+
 .form-error {
   color: red;
   font-style: italic;

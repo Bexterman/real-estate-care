@@ -1,7 +1,7 @@
 :root {
-  --rec-primary-color: #3b4a52;
+  --rec-primary-color: #293439;
   --rec-primary-color-tr: #293439a8;
-  --rec-secondary-color: #00ded3;
+  --rec-secondary-color: #00aaa2;
   --rec-secondary-color-tr: #00aaa280;
   --rec-tertiaire-color: #dcdcdc;
   --rec-tertiaire-color-tr: rgba(255, 255, 255, 0.531);
@@ -24,9 +24,9 @@
 }
 
 .themeToggle {
-  --rec-primary-color: #50b6b2;
+  --rec-primary-color: #00aaa2;
+  --rec-secondary-color: #293439;
   --rec-secondary-color-tr: #3c3d3d80;
-  --rec-secondary-color: #3b4a52;
   --rec-tertiaire-color: #616161;
 	--ion-background-color:#272727;
 
@@ -34,7 +34,7 @@
   --page-footer-text: var(--rec-secondary-color);
 
 	--accent-1: #1f1f1f;
-	--accent-2: #9f9f9f;
+	--accent-2: #a9a9a9;
 	--accent-3: var(--ion-background-color);
 	--accent-4: var(--rec-tertiaire-color);
 	--accent-5: #3b3b3b;

@@ -1,6 +1,6 @@
 <template>
   <header>
-    <h2>Algemene informatie</h2>
+    <h2 class="form-heading">Algemene informatie</h2>
   </header>
 
   <ion-list class="assigned-view-form-list">

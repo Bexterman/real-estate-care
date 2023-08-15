@@ -1,7 +1,7 @@
 <template>
   <!-- Form Damage Report -->
     <header>
-      <h2>Schade rapportage</h2>
+      <h2 class="form-heading">Schade rapportage</h2>
     </header>
     
     <ion-list>
