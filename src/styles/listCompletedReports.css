@@ -26,11 +26,6 @@ hr {
   border: 2px solid var(--rec-primary-color);
 }
 
-/* -----------------## Page Content Styles */
-.main-card-content {
-  margin-block-end: 15px;
-}
-
 /* ----### Card Header Styles */
 .main-card-content ion-card-header h2 {
   color: var(--rec-primary-color);
@@ -38,6 +33,7 @@ hr {
   border-radius: 5px;
   padding-inline: 5px;
   padding-block: 10px;
+  margin-block-end: 25px;
 }
 
 .main-card-content ion-card-header h2:active {
