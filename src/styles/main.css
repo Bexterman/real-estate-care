@@ -32,7 +32,7 @@ p {
 
 
 ion-content {
-  --background: var(--rec-tertiaire-color);
+  --background: #475e6c4d;
 }
 
 ion-toolbar {
