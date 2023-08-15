@@ -12,7 +12,7 @@
             "dmg_type": "Slijtage",
             "dmg_noticed": "2022-12-05",
             "dmg_action_required": true,
-            "dmg_description": "Gat in de vloer te zien, vermoeden van slijtage steunbalk. Woning gebouwd in 1916.",
+            "dmg_description": "Gat in de vloer. Woning gebouwd in 1916.",
             "dmg_image_a": "foto1.jpeg",
             "dmg_image_b": "foto2.jpeg",
             "dmg_image_c": "foto3.jpeg"
@@ -36,7 +36,7 @@
             "tch_malfunction": "Verwarming wordt niet warm.",
             "tch_testprocedure": "document1.pdf",
             "tch_approved": false,
-            "tch_commentary": "Controle vergeten bij de buren ivm blokverwarming.",
+            "tch_commentary": "Controle bij de buren ivm blokverwarming.",
             "tch_image_a": "foto7.jpeg",
             "tch_image_b": "",
             "tch_image_c": ""
@@ -49,7 +49,7 @@
             "mfs_executed_party": "Huurder",
             "mfs_type": "Kozijn vervangen.",
             "mfs_action_required": "Laten keuren",
-            "mfs_commentary": "Netjes afgewerkt, maar voor de zekerheid laten keuren door specialist.",
+            "mfs_commentary": "Laten keuren door specialist.",
             "mfs_image1": "foto8.jpeg",
             "mfs_image2": "foto9.jpeg",
             "mfs_image3": ""
@@ -105,9 +105,9 @@
             "mfs_documented": "verslagen-modificaties.pdf",
             "mfs_location": "Gang",
             "mfs_executed_party": "Huurder",
-            "mfs_type": "Huurder heeft zelf geprobeerd om de losse draden aan de intercom te installeren.",
+            "mfs_type": "Huurder heeft zelf de intercom gemonteerd.",
             "mfs_action_required": "Laten aanpassen en keuren.",
-            "mfs_commentary": "Aan de huurder verteld dat zij voortaan de verhuurder moet benaderen bij een gebreken in de woning.",
+            "mfs_commentary": "Aan de huurder medegedeeld dit voortaan aan de verhuurder te melden.",
             "mfs_image1": "foto12.jpeg",
             "mfs_image2": "",
             "mfs_image3": ""
@@ -128,7 +128,7 @@
             "dmg_type": "Moedwillig",
             "dmg_noticed": "2023-02-21",
             "dmg_action_required": true,
-            "dmg_description": "Buurman van bewoners is het dak op geklommen, waardoor dakpannen gebroken zijn. Een aantal missen. Ook is het dakraam stuk geslagen. Buurman had last van de parkieten op zolder.",
+            "dmg_description": "Dakpannen gebroken doordat de buurman op het dak klom. Ook is het dakraam stuk geslagen.",
             "dmg_image_a": "foto13.jpeg",
             "dmg_image_b": "foto14.jpeg",
             "dmg_image_c": "foto15.jpeg"
@@ -149,10 +149,10 @@
           "technical": {
             "tch_location": "Keuken",
             "tch_type": "Luchtverversing",
-            "tch_malfunction": "Met name tijdens het koken, kan er onvoldoende gelucht worden. De lucht gaat teveel het huis in.",
+            "tch_malfunction": "Onvoldoende luchteing tijdens het koken.",
             "tch_testprocedure": "document2.pdf",
             "tch_approved": false,
-            "tch_commentary": "Muren hebben een klein oppervlakte (minder dan 12m2) en de keuken bevindt zich op de eerste verdieping.",
+            "tch_commentary": "Keuken bevindt zich op de eerste verdieping.",
             "tch_image_a": "foto19.jpeg",
             "tch_image_b": "foto20.jpeg",
             "tch_image_c": "foto21.jpeg"
@@ -163,9 +163,9 @@
             "mfs_documented": "verslagen-modificaties.pdf",
             "mfs_location": "Bijkamer",
             "mfs_executed_party": "Aannemer",
-            "mfs_type": "De aannemer had een luifel laten monteren, echter hangt deze scheef door hevige wind.",
+            "mfs_type": "Luifel hangt scheef door hevige wind.",
             "mfs_action_required": "Laten verwijderen",
-            "mfs_commentary": "Als je in de tuin staat en je kijkt naar de luifel, zie je dat de luifel zwaar misvormd is. Waarschijnlijk is er iets zwaars opgevallen. ",
+            "mfs_commentary": "De luifel is misvormd. Waarschijnlijk iets zwaars op gevallen. ",
             "mfs_image1": "foto23.jpeg",
             "mfs_image2": "foto24.jpeg",
             "mfs_image3": "foto25"
@@ -186,7 +186,7 @@
             "dmg_type": "Calamiteiten",
             "dmg_noticed": "2023-01-13",
             "dmg_action_required": true,
-            "dmg_description": "Vanwege brand in de keuken is er schade door de brandweer veroorzaakt: een ladder kwam tegen het raam aan, waardoor het kozijn vervangen moet worden.",
+            "dmg_description": "Een ladder viel tegen het raam, waardoor het kozijn vervangen moet worden.",
             "dmg_image_a": "foto26.jpeg",
             "dmg_image_b": "foto27.jpeg",
             "dmg_image_c": "foto28.jpeg"
@@ -210,7 +210,7 @@
             "tch_malfunction": "Beveiligingscamera is defect door de calamiteit.",
             "tch_testprocedure": "document3.pdf",
             "tch_approved": true,
-            "tch_commentary": "Het verzoek of beveiligingscamera iets naar boven geplaatst kan worden voor totaal overzicht van die zijde van het huis.",
+            "tch_commentary": "Het verzoek of beveiligingscamera iets naar boven geplaatst kan worden.",
             "tch_image_a": "foto31.jpeg",
             "tch_image_b": "foto32.jpeg",
             "tch_image_c": ""
@@ -244,7 +244,7 @@
             "dmg_type": "Normaal gebruik",
             "dmg_noticed": "2023-04-17",
             "dmg_action_required": true,
-            "dmg_description": "Bewoners zijn sinds 17 april verhuisd, maar ontdekte zwarte schimmel aan het plafond van de muur toen zij tegels weghaalde.",
+            "dmg_description": "Bewoners zijn sinds 17 april verhuisd, maar ontdekte zwarte schimmel aan het plafond.",
             "dmg_image_a": "foto33.jpeg",
             "dmg_image_b": "",
             "dmg_image_c": ""
