@@ -37,7 +37,7 @@
                 <ion-card-header>
                   <div @click="toggleDropdown(filteredReport.id)">
                     <h2>
-                      #{{ filteredReport.id }} | {{ filteredReport.location }}
+                      #{{ filteredReport.id }} | {{ filteredReport.address }}
                       <br><sub>Datum: {{ filteredReport.date }}</sub>
                     </h2>
                   </div>
@@ -51,17 +51,17 @@
                         <header>
                           <h3>Beschadiging</h3>
                         </header>
-                        <p><span>Locatie:</span> {{ filteredReport.report[0].damage.room }} </p> 
-                        <p><span>Nieuwe schade:</span> {{ filteredReport.report[0].damage.new }} </p>
-                        <p><span>Type schade:</span> {{ filteredReport.report[0].damage.type }} </p>
-                        <p><span>Constatering:</span> {{ filteredReport.report[0].damage.noticed }} </p>
-                        <p><span>Actie vereist:</span> {{ filteredReport.report[0].damage.action_required }} </p>
-                        <p><span>Omschrijving:</span> {{ filteredReport.report[0].damage.description }} </p>
+                        <p><span>Locatie:</span> {{ filteredReport.report[0].damage.dmg_location }} </p> 
+                        <p><span>Nieuwe schade:</span> {{ filteredReport.report[0].damage.dmg_new }} </p>
+                        <p><span>Type schade:</span> {{ filteredReport.report[0].damage.dmg_type }} </p>
+                        <p><span>Constatering:</span> {{ filteredReport.report[0].damage.dmg_noticed }} </p>
+                        <p><span>Actie vereist:</span> {{ filteredReport.report[0].damage.dmg_action_required }} </p>
+                        <p><span>Omschrijving:</span> {{ filteredReport.report[0].damage.dmg_description }} </p>
 
                         <br><p><strong>Bijlage</strong></p>
-                        <p>Afbeelding 1: <a>{{ filteredReport.report[0].damage.image_a }}</a> </p>
-                        <p>Afbeelding 2: <a>{{ filteredReport.report[0].damage.image_b }}</a></p> 
-                        <p>Afbeelding 3: <a>{{ filteredReport.report[0].damage.image_c }}</a> </p>
+                        <p>Afbeelding 1: <a>{{ filteredReport.report[0].damage.dmg_image_a }}</a> </p>
+                        <p>Afbeelding 2: <a>{{ filteredReport.report[0].damage.dmg_image_b }}</a></p> 
+                        <p>Afbeelding 3: <a>{{ filteredReport.report[0].damage.dmg_image_c }}</a> </p>
                       </li>
 
                       <hr>
@@ -71,15 +71,15 @@
                         <header>
                           <h3>Achterstallig Onderhoud</h3>
                         </header>
-                        <p><span>Locatie:</span> {{ filteredReport.report[1].maintenance.room }} </p>
-                        <p><span>Type onderhoud:</span> {{ filteredReport.report[1].maintenance.type }} </p>
-                        <p><span>Actie vereist:</span> {{ filteredReport.report[1].maintenance.action_required }} </p>
-                        <p><span>Geschatte kosten:</span> {{ filteredReport.report[1].maintenance.estimated_expense }} </p>
+                        <p><span>Locatie:</span> {{ filteredReport.report[1].maintenance.mtc_location }} </p>
+                        <p><span>Type onderhoud:</span> {{ filteredReport.report[1].maintenance.mtc_type }} </p>
+                        <p><span>Actie vereist:</span> {{ filteredReport.report[1].maintenance.mtc_action_required }} </p>
+                        <p><span>Geschatte kosten:</span> {{ filteredReport.report[1].maintenance.mtc_estimated_expense }} </p>
 
                         <br><p><span>Bijlage</span></p>
-                        <p>Afbeelding 1: <a>{{ filteredReport.report[1].maintenance.image_a }}</a> </p>
-                        <p>Afbeelding 2: <a>{{ filteredReport.report[1].maintenance.image_b }}</a> </p>
-                        <p>Afbeelding 3: <a>{{ filteredReport.report[1].maintenance.image_c }}</a> </p>
+                        <p>Afbeelding 1: <a>{{ filteredReport.report[1].maintenance.mtc_image_a }}</a> </p>
+                        <p>Afbeelding 2: <a>{{ filteredReport.report[1].maintenance.mtc_image_b }}</a> </p>
+                        <p>Afbeelding 3: <a>{{ filteredReport.report[1].maintenance.mtc_image_c }}</a> </p>
                       </li>
 
                       <hr>
@@ -89,17 +89,17 @@
                         <header>
                           <h3>Technische Installatie</h3>
                         </header>
-                        <p><span>Locatie:</span> {{ filteredReport.report[2].technical.room }} </p>
-                        <p><span>Type installatie:</span> {{ filteredReport.report[2].technical.type }} </p>
-                        <p><span>Gebreken:</span> {{ filteredReport.report[2].technical.malfunction }} </p>
-                        <p><span>Testprocedure:</span> {{ filteredReport.report[2].technical.testprocedure }} </p>
-                        <p><span>Goed gekeurd:</span> {{ filteredReport.report[2].technical.approved }} </p>
-                        <p><span>Commentaar:</span> {{ filteredReport.report[2].technical.commentary }} </p>
+                        <p><span>Locatie:</span> {{ filteredReport.report[2].technical.tch_location }} </p>
+                        <p><span>Type installatie:</span> {{ filteredReport.report[2].technical.tch_type }} </p>
+                        <p><span>Gebreken:</span> {{ filteredReport.report[2].technical.tch_malfunction }} </p>
+                        <p><span>Testprocedure:</span> {{ filteredReport.report[2].technical.tch_testprocedure }} </p>
+                        <p><span>Goed gekeurd:</span> {{ filteredReport.report[2].technical.tch_approved }} </p>
+                        <p><span>Commentaar:</span> {{ filteredReport.report[2].technical.tch_commentary }} </p>
 
                         <br><p><span>Bijlage</span></p>
-                        <p>Afbeelding 1: <a>{{ filteredReport.report[2].technical.image_a }}</a> </p>
-                        <p>Afbeelding 2: <a>{{ filteredReport.report[2].technical.image_b }}</a> </p>
-                        <p>Afbeelding 3: <a>{{ filteredReport.report[2].technical.image_c }}</a> </p>
+                        <p>Afbeelding 1: <a>{{ filteredReport.report[2].technical.tch_image_a }}</a> </p>
+                        <p>Afbeelding 2: <a>{{ filteredReport.report[2].technical.tch_image_b }}</a> </p>
+                        <p>Afbeelding 3: <a>{{ filteredReport.report[2].technical.tch_image_c }}</a> </p>
                       </li>
 
                       <hr>
@@ -109,17 +109,17 @@
                         <header>
                           <h3>Modificaties</h3>
                         </header>
-                        <p><span>Documentatie:</span> <a>{{ filteredReport.report[3].modifications.documented }}</a> </p>
-                        <p><span>Locatie:</span> {{ filteredReport.report[3].modifications.room }} </p>
-                        <p><span>Uitvoerende partij:</span> {{ filteredReport.report[3].modifications.executed_party }} </p>
-                        <p><span>Modificatie:</span> {{ filteredReport.report[3].modifications.type }} </p>
-                        <p><span>Actie vereist:</span> {{ filteredReport.report[3].modifications.action_required }} </p>
-                        <p><span>Commentaar:</span> {{ filteredReport.report[3].modifications.commentary }} </p>
+                        <p><span>Documentatie:</span> <a>{{ filteredReport.report[3].modifications.mfs_documented }}</a> </p>
+                        <p><span>Locatie:</span> {{ filteredReport.report[3].modifications.mfs_location }} </p>
+                        <p><span>Uitvoerende partij:</span> {{ filteredReport.report[3].modifications.mfs_executed_party }} </p>
+                        <p><span>Modificatie:</span> {{ filteredReport.report[3].modifications.mfs_type }} </p>
+                        <p><span>Actie vereist:</span> {{ filteredReport.report[3].modifications.mfs_action_required }} </p>
+                        <p><span>Commentaar:</span> {{ filteredReport.report[3].modifications.mfs_commentary }} </p>
                         
                         <br><p><span>Bijlage</span></p>
-                        <p>Afbeelding 1: <a>{{ filteredReport.report[3].modifications.image_a }}</a> </p>
-                        <p>Afbeelding 2: <a>{{ filteredReport.report[3].modifications.image_b }}</a> </p>
-                        <p>Afbeelding 3: <a>{{ filteredReport.report[3].modifications.image_c }}</a> </p>
+                        <p>Afbeelding 1: <a>{{ filteredReport.report[3].modifications.mfs_image_a }}</a> </p>
+                        <p>Afbeelding 2: <a>{{ filteredReport.report[3].modifications.mfs_image_b }}</a> </p>
+                        <p>Afbeelding 3: <a>{{ filteredReport.report[3].modifications.mfs_image_c }}</a> </p>
                       </li>
 
                     </ul>
@@ -149,47 +149,47 @@ import PageLayout from '@/components/PageLayout.vue';
 import { IonPage, IonContent, IonCard, IonCardContent, IonCardHeader, IonCardSubtitle, IonCardTitle, IonButton } from '@ionic/vue';
 
 export type DamageReport = {
-  room: string,
-  new: boolean,
-  type: string,
-  noticed: Date,
-  action_required: boolean,
-  description: string,
-  image_a: File,
-  image_b: File,
-  image_c: File
+  dmg_location: string,
+  dmg_new: boolean,
+  dmg_type: string,
+  dmg_noticed: Date,
+  dmg_action_required: boolean,
+  dmg_description: string,
+  dmg_image_a: File,
+  dmg_image_b: File,
+  dmg_image_c: File
 }
 export type MaintenanceReport = {
-  room: string,
-  type: string,
-  noticed: Date,
-  action_required: boolean,
-  estimated_expense: string,
-  image_a: File,
-  image_b: File,
-  image_c: File
+  mtc_location: string,
+  mtc_type: string,
+  mtc_noticed: Date,
+  mtc_action_required: boolean,
+  mtc_estimated_expense: string,
+  mtc_image_a: File,
+  mtc_image_b: File,
+  mtc_image_c: File
 }
 export type TechnicalReport = {
-  room: string,
-  type: string,
-  malfunction: string,
-  testprocedure: File,
-  approved: boolean,
-  commentary: string,
-  image_a: File,
-  image_b: File,
-  image_c: File
+  tch_location: string,
+  tch_type: string,
+  tch_malfunction: string,
+  tch_testprocedure: File,
+  tch_approved: boolean,
+  tch_commentary: string,
+  tch_image_a: File,
+  tch_image_b: File,
+  tch_image_c: File
 }
 export type ModificationsReport = {
-  documented: File,
-  room: string,
-  executed_party: string,
-  type: string,
-  action_required: string,
-  commentary: string,
-  image_a: File,
-  image_b: File,
-  image_c: File
+  mfs_documented: File,
+  mfs_location: string,
+  mfs_executed_party: string,
+  mfs_type: string,
+  mfs_action_required: string,
+  mfs_commentary: string,
+  mfs_image_a: File,
+  mfs_image_b: File,
+  mfs_image_c: File
 }
 
 export type ReportType = {
@@ -202,7 +202,7 @@ export type ReportType = {
 export type Reports = {
   id: number,
   date: Date,
-  location: string,
+  address: string,
   report: ReportType[]
 }
 
@@ -245,7 +245,7 @@ export default defineComponent({
 
     const filteredList = computed(() => {
       return store.getters.sortedPosts.filter((filteredReport: any) => {
-        const matchedLocation = filteredReport.location.toLowerCase().includes(locationSearch.value.toLowerCase());
+        const matchedLocation = filteredReport.address.toLowerCase().includes(locationSearch.value.toLowerCase());
         const matchedId = filteredReport.id.toString().includes(idSearch.value);
         return matchedLocation && matchedId;
       });
