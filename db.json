@@ -61,7 +61,7 @@
     {
       "id": 2,
       "date": "2023-02-01",
-      "location": "Talmalaan 50, 3222RE Schiedam",
+      "address": "Talmalaan 50, 3222RE Schiedam",
       "report": [
         {
           "damage": {
@@ -119,7 +119,7 @@
     {
       "id": 3,
       "date": "2023-03-03",
-      "location": "Prins Frederikhendrikstraat 56, 0987MI Amsterdam",
+      "address": "Prins Frederikhendrikstraat 56, 0987MI Amsterdam",
       "report": [
         {
           "damage": {
@@ -177,7 +177,7 @@
     {
       "id": 4,
       "date": "2022-04-17",
-      "location": "Burgemeester Honnerlage Gretelaan 403, 0420PS Stellendam",
+      "address": "Burgemeester Honnerlage Gretelaan 403, 0420PS Stellendam",
       "report": [
         {
           "damage": {
@@ -235,7 +235,7 @@
     {
       "id": 5,
       "date": "2023-04-30",
-      "location": "Valeriusstraat 63, 6964UM Volendam",
+      "address": "Valeriusstraat 63, 6964UM Volendam",
       "report": [
         {
           "damage": {
