@@ -1,5 +1,9 @@
 
 /* -----------------## Global Styles */
+.card-content-md h2 {
+  font-size: 20px;
+}
+
 .form-heading {
   color: var(--accent-10);
   letter-spacing: .6px;

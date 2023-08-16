@@ -30,6 +30,15 @@ p {
   color: var(--accent-6);
 }
 
+hr {
+  border: 0;
+  clear: both;
+  display: block;
+  width: 96%;               
+  background-color: var(--accent-5);
+  height: 1px;
+  margin-block: 10px;
+}
 
 ion-content {
   --background: #475e6c4d;

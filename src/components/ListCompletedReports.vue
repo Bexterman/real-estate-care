@@ -38,7 +38,7 @@
                   <div @click="toggleDropdown(filteredReport.id)">
                     <h2>
                       #{{ filteredReport.id }} | {{ filteredReport.address }}
-                      <br><sub>Datum: {{ filteredReport.date }}</sub>
+                      <br><sub>Opmaakdatum: {{ filteredReport.date }}</sub>
                     </h2>
                   </div>
 
@@ -236,7 +236,6 @@ export default defineComponent({
       store.dispatch('fetchPosts').then(() => {
         loading.value = false;
 
-        // dropdown functie
         store.state.posts.forEach((report: Reports) => {
           dropdownReport.value[report.id] = false;
         });

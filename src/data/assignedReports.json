@@ -1,0 +1,178 @@
+{
+  "rec_reports": [
+    {
+      "id": 6,
+      "date": "2023-08-10",
+      "address": "Professor Calamiteitlaan 22, 5556SP Tilburg",
+      "report": [
+        {
+          "damage": {
+            "dmg_location": "Keuken",
+            "dmg_new": true,
+            "dmg_type": "Slijtage",
+            "dmg_noticed": "2022-12-05",
+            "dmg_action_required": true,
+            "dmg_description": "Gat in de vloer. Woning gebouwd in 1916.",
+            "dmg_image_a": "foto1.jpeg",
+            "dmg_image_b": "foto2.jpeg",
+            "dmg_image_c": "foto3.jpeg"
+          }
+        },
+        {
+          "maintenance": {
+            "mtc_location": "Woonkamer",
+            "mtc_type": "Elektra",
+            "mtc_action_required": true,
+            "mtc_estimated_expense": "500-1500",
+            "mtc_image_a": "foto4.jpeg",
+            "mtc_image_b": "foto5.jpeg",
+            "mtc_image_c": "foto6.jpeg"
+          }
+        },
+        {
+          "technical": {
+            "tch_location": "Woonkamer",
+            "tch_type": "Verwarming",
+            "tch_malfunction": "Verwarming wordt niet warm.",
+            "tch_testprocedure": "document1.pdf",
+            "tch_approved": false,
+            "tch_commentary": "Controle bij de buren ivm blokverwarming.",
+            "tch_image_a": "foto7.jpeg",
+            "tch_image_b": "",
+            "tch_image_c": ""
+          }
+        },
+        {
+          "modifications": {
+            "mfs_documented": "verslagen-modificaties.pdf",
+            "mfs_location": "Slaapkamer",
+            "mfs_executed_party": "Huurder",
+            "mfs_type": "Kozijn vervangen.",
+            "mfs_action_required": "Laten keuren",
+            "mfs_commentary": "Laten keuren door specialist.",
+            "mfs_image1": "foto8.jpeg",
+            "mfs_image2": "foto9.jpeg",
+            "mfs_image3": ""
+            
+          }
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "date": "2023-08-09",
+      "address": "Dokter Bibber 42E, 9830BR Breda",
+      "report": [
+        {
+          "damage": {
+            "dmg_location": "Gang",
+            "dmg_new": true,
+            "dmg_type": "Geweld",
+            "dmg_noticed": "2022-08-30",
+            "dmg_action_required": true,
+            "dmg_description": "Door huiselijk geweld is de intercom stuk geslagen.",
+            "dmg_image_a": "foto10.jpeg",
+            "dmg_image_b": "foto11.jpeg",
+            "dmg_image_c": ""
+          }
+        },
+        {
+          "maintenance": {
+            "mtc_location": "",
+            "mtc_type": "",
+            "mtc_action_required": false,
+            "mtc_estimated_expense": "",
+            "mtc_image_a": "",
+            "mtc_image_b": "",
+            "mtc_image_c": ""
+          }
+        },
+        {
+          "technical": {
+            "tch_location": "",
+            "tch_type": "",
+            "tch_malfunction": "",
+            "tch_testprocedure": "",
+            "tch_approved": false,
+            "tch_commentary": "",
+            "tch_image_a": "",
+            "tch_image_b": "",
+            "tch_image_c": ""
+          }
+        },
+        {
+          "modifications": {
+            "mfs_documented": "verslagen-modificaties.pdf",
+            "mfs_location": "Gang",
+            "mfs_executed_party": "Huurder",
+            "mfs_type": "Huurder heeft zelf de intercom gemonteerd.",
+            "mfs_action_required": "Laten aanpassen en keuren.",
+            "mfs_commentary": "Aan de huurder medegedeeld dit voortaan aan de verhuurder te melden.",
+            "mfs_image1": "foto12.jpeg",
+            "mfs_image2": "",
+            "mfs_image3": ""
+            
+          }
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "date": "2023-08-11",
+      "address": "Ingenieurenstraat 69, 1119IG Eindhoven",
+      "report": [
+        {
+          "damage": {
+            "dmg_location": "Zolder",
+            "dmg_new": true,
+            "dmg_type": "Moedwillig",
+            "dmg_noticed": "2023-02-21",
+            "dmg_action_required": true,
+            "dmg_description": "Dakpannen gebroken doordat de buurman op het dak klom. Ook is het dakraam stuk geslagen.",
+            "dmg_image_a": "foto13.jpeg",
+            "dmg_image_b": "foto14.jpeg",
+            "dmg_image_c": "foto15.jpeg"
+          }
+        },
+        {
+          "maintenance": {
+            "mtc_location": "Keukenramen zijn enkelglas en moeten dubbelglas worden.",
+            "mtc_type": "Beglazing",
+            "mtc_action_required": true,
+            "mtc_estimated_expense": "1500+",
+            "mtc_image_a": "foto16.jpeg",
+            "mtc_image_b": "foto17.jpeg",
+            "mtc_image_c": "foto18.jpeg"
+          }
+        },
+        {
+          "technical": {
+            "tch_location": "Keuken",
+            "tch_type": "Luchtverversing",
+            "tch_malfunction": "Onvoldoende luchteing tijdens het koken.",
+            "tch_testprocedure": "document2.pdf",
+            "tch_approved": false,
+            "tch_commentary": "Keuken bevindt zich op de eerste verdieping.",
+            "tch_image_a": "foto19.jpeg",
+            "tch_image_b": "foto20.jpeg",
+            "tch_image_c": "foto21.jpeg"
+          }
+        },
+        {
+          "modifications": {
+            "mfs_documented": "verslagen-modificaties.pdf",
+            "mfs_location": "Bijkamer",
+            "mfs_executed_party": "Aannemer",
+            "mfs_type": "Luifel hangt scheef door hevige wind.",
+            "mfs_action_required": "Laten verwijderen",
+            "mfs_commentary": "De luifel is misvormd. Waarschijnlijk iets zwaars op gevallen. ",
+            "mfs_image1": "foto23.jpeg",
+            "mfs_image2": "foto24.jpeg",
+            "mfs_image3": "foto25"
+            
+          }
+        }
+      ]
+    }
+  ]
+}

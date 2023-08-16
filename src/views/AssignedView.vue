@@ -28,7 +28,7 @@
               <v-form v-if="showForm" @submit="onSubmit">
 
                 <!-- Form Global Information -->
-                <form-global></form-global>
+                <FormGlobal/>
 
                 <!-- Select Forms -->
                 <ion-select v-model="selectedFormOption">
@@ -55,35 +55,21 @@
               <!-- Overview Submitted Reports -->
               <br>
               <br>
-              <br>
-              <br>
-              <div v-if="formSubmissions.length > 0">
-                <header>
-                  <h2>Overzicht toegewezen rapportages</h2>
-                </header>
-                <div v-for="(submission, index) in formSubmissions" :key="index">
-                  <header>
-                    <h3>#{{ submission.id + ' | ' + submission.address }}</h3>
-                    <sub>Opmaakdatum: {{ submission.date }}</sub>
-                  </header>
-                  <br>
-                  <ul>
 
-                    <!-- Damage Report -->
-                    <li>
-                      <header>
-                        <h4>Beschadiging</h4>
-                      </header>
-                      <p><span>Locatie:</span> {{ submission.dmg_location }}</p> 
-                      <p><span>Type schade:</span> {{ submission.dmg_new }}</p>
-                      <p><span>Nieuwe schade:</span> {{ submission.dmg_type }}</p>
-                    </li>
-                  </ul>
-                  <br>
-                  <br>
-                  <br>
-                </div>
-              </div>
+              <br>
+                <hr>
+              <br>
+
+              <header>
+                <h2 class="heading-overview-reports">Recent opgemaakt</h2>
+                <small><em>wijzigen mogelijk</em></small>
+              </header>
+              <br>
+              <br>
+
+              <RecentAssignedReports :formSubmissions="formSubmissions" />
+
+              <ListRecentAssignedReports/>
 
             </ion-card-content>
           </ion-card>
@@ -98,6 +84,9 @@
 import PageLayout from '@/components/PageLayout.vue';
 import FormGlobal from '@/components/FormGlobal.vue';
 import FormDamage from '@/components/FormDamage.vue';
+import RecentAssignedReports from '@/components/RecentAssignedReports.vue';
+import ListRecentAssignedReports from '@/components/ListRecentAssignedReports.vue';
+
 
 import { defineComponent, ref, Ref } from 'vue';
 import * as V from 'vee-validate/dist/vee-validate';
@@ -107,9 +96,11 @@ export default defineComponent({
   name: 'AssignedView',
   components: {
     PageLayout,
-    IonPage,
     FormGlobal,
     FormDamage,
+    RecentAssignedReports,
+    ListRecentAssignedReports,
+    IonPage,
     IonCard,
     IonContent,
     IonCardHeader,
@@ -126,14 +117,14 @@ export default defineComponent({
     const showForm = ref(false);
     const formSubmissions: Ref<any[]> = ref([]);
 
+
     const onSubmit = (data: any) => {
-      formSubmissions.value.push(data);
-      alert("ON SUBMIT" + JSON.stringify(data, null, 2));
+      formSubmissions.value.unshift(data);
     };
 
     const toggleForm = () => {
-    showForm.value = !showForm.value;
-  };
+      showForm.value = !showForm.value;
+    };
 
     return {
       onSubmit,
@@ -141,6 +132,7 @@ export default defineComponent({
       showForm,
       toggleForm,
       formSubmissions,
+
     }
   },
 });
