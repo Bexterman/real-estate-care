@@ -187,7 +187,7 @@ export default defineComponent({
   },
   props: {
     filteredList: {
-      type: Array as PropType<Report[]>, // Replace with your data type
+      type: Array as PropType<Reports[]>, // Replace with your data type
       required: true,
     },
     toggleDropdown: {
