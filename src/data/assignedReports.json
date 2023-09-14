@@ -50,9 +50,9 @@
             "mfs_type": "Kozijn vervangen.",
             "mfs_action_required": "Laten keuren",
             "mfs_commentary": "Laten keuren door specialist.",
-            "mfs_image1": "foto8.jpeg",
-            "mfs_image2": "foto9.jpeg",
-            "mfs_image3": ""
+            "mfs_image_a": "foto8.jpeg",
+            "mfs_image_b": "foto9.jpeg",
+            "mfs_image_c": ""
             
           }
         }
@@ -108,9 +108,9 @@
             "mfs_type": "Huurder heeft zelf de intercom gemonteerd.",
             "mfs_action_required": "Laten aanpassen en keuren.",
             "mfs_commentary": "Aan de huurder medegedeeld dit voortaan aan de verhuurder te melden.",
-            "mfs_image1": "foto12.jpeg",
-            "mfs_image2": "",
-            "mfs_image3": ""
+            "mfs_image_a": "foto12.jpeg",
+            "mfs_image_b": "",
+            "mfs_image_c": ""
             
           }
         }
