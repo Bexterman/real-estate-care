@@ -1,6 +1,6 @@
 /* -----------------## Main Content Header Styles */
 .main-card-content header {
-  margin-inline-end: 50px;
+inline-size: 100%;
 }
 
 /* -----------------## Main Content Section Styles */
@@ -16,6 +16,11 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  inline-size: 100%;
+}
+
+.card-content-md h4 {
+  inline-size: 100%;
 }
 
 /* ----### Toggle Styles */

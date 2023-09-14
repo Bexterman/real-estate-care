@@ -21,11 +21,11 @@ import '@ionic/vue/css/text-transformation.css';
 import '@ionic/vue/css/flex-utils.css';
 import '@ionic/vue/css/display.css';
 
+
 /* Theme variables */
 import './styles/main.css';
 
-import PageLayout from './components/PageLayout.vue';
-
+import PageLayout from './components/includes/PageLayout.vue';
 
 const app = createApp(App);
 app.use(IonicVue);
@@ -33,6 +33,8 @@ app.use(router);
 app.use(store);
 app.component('page-layout', PageLayout);
 
+
 router.isReady().then(() => {
   app.mount('#app');
 });
+

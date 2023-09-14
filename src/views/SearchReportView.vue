@@ -10,9 +10,16 @@
             <!-- Page Header -->
             <ion-card-header class="main-card-header">
               <ion-card-title class="main-card-title">
-                <h1>Uitgevoerde rapportages</h1>
+                <h1>Zoeken naar rapportages</h1>
               </ion-card-title>
 
+              <!-- Page Subheader -->
+              <ion-card-subtitle class="main-card-subtitle">
+                <br><label>Zoeken op id-nummer</label>
+                <br><input type="text" v-model="idSearch" placeholder="Typ id nummer">
+                <br><br><label>Zoeken op locatie</label>
+                <br><input type="text" v-model="locationSearch" placeholder="Typ adres en/of postcode..." />
+              </ion-card-subtitle>
             </ion-card-header>
 
             <br>
@@ -20,11 +27,13 @@
             <p><em>Klik op het rapport voor meer informatie</em></p>
             <br>
 
-            <ListCompletedReports :filteredList="filteredList" :toggleDropdown="toggleDropdown"></ListCompletedReports>
+            <ListCompletedReports v-if="displaySearchedReport" :filteredList="filteredList"
+              :toggleDropdown="toggleDropdown" />
 
           </ion-card>
         </div>
       </ion-content>
+
     </page-layout>
   </ion-page>
 </template>
@@ -37,7 +46,7 @@ import PageLayout from '@/components/includes/PageLayout.vue';
 import { useReportList } from '@/compositions/useReportList';
 
 export default defineComponent({
-  name: 'CompletedView',
+  name: 'SearchReportView',
   components: {
     PageLayout,
     ListCompletedReports,
@@ -51,7 +60,7 @@ export default defineComponent({
   setup() {
     const locationSearch = ref('');
     const idSearch = ref('');
-    const { loading, error, filteredList, toggleDropdown } = useReportList(locationSearch, idSearch);
+    const { loading, error, filteredList, toggleDropdown, displaySearchedReport } = useReportList(locationSearch, idSearch);
 
     return {
       locationSearch,
@@ -60,7 +69,10 @@ export default defineComponent({
       error,
       filteredList,
       toggleDropdown,
+      displaySearchedReport,
     };
   },
 });
 </script>
+
+<style src="../styles/listCompletedReports.css"></style>

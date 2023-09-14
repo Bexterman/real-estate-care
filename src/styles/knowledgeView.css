@@ -1,0 +1,29 @@
+
+.theme-card {
+  margin-block: 40px;
+
+  background-color: var(--accent-5);
+}
+
+
+.theme-card-header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 20px;
+  padding-block: 20px;
+  padding-inline-start: 20px;
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--rec-primary-color);
+}
+
+.theme-card-header:hover {
+  cursor: pointer;
+}
+
+.theme-card ion-card-content {
+  color: var(--accent-6);
+  padding-block: 20px 60px !important;
+  padding-inline: 40px;
+}

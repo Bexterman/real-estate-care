@@ -41,7 +41,7 @@ hr {
 }
 
 ion-content {
-  --background: #475e6c4d;
+  --background: var(--accent-12);
 }
 
 ion-toolbar {
@@ -173,8 +173,41 @@ ion-item {
 
     .main-card-content  h2 {
       font-weight: 700;
+      font-size: 16px;
     }
 
+.main-card-container .info__page {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  margin-block-start: 40px;
+}
+
+.main-card-container .info__page h2 { 
+  font-size: 28px;
+  text-align: center;
+  font-weight: 500;
+}
+.main-card-container .info__page p { 
+  font-size: 24px;
+  color: var(--accent-9);
+}
+
+.main-card-container .info__page div { 
+  display: flex;
+  gap: 30px;
+  margin-block-start: 40px;
+}
+
+.main-card-container .info__page div small a { 
+  color: inherit;
+}
+
+.main-card-container .info__page div small a:hover { 
+  color: var(--accent-9);
+}
 
 /* -----------------## Footer Styles */
 .wrapper-page-footer {

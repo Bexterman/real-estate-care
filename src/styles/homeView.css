@@ -25,7 +25,7 @@
 
 .card-container:hover,
 .card-container:active {
-  background-color: var(--rec-secondary-color-tr);
+  background-color: var(--rec-tertiaire-color);
   cursor: pointer;
 }
 

@@ -16,11 +16,13 @@
 
             <!-- Main Content -->
             <ion-card-content class="main-card-content">
+
+              <!-- Global Settings -->
               <article>
                 <header>
                   <h2>Algemeen</h2>
                 </header>
-                
+
                 <!-- Notification Settings -->
                 <section>
                   <header>
@@ -28,7 +30,9 @@
                   </header>
                   <div>
                     <ion-toggle v-model="notificationsToggleChecked"></ion-toggle>
-                    <ion-icon class="settings-view-icon transition-delay" :src="notificationsToggleChecked ? notifications : notificationsOff" :style="{color: notificationsToggleChecked ? '#03c8bf' : ''}"></ion-icon>
+                    <ion-icon class="settings-view-icon transition-delay"
+                      :src="notificationsToggleChecked ? notifications : notificationsOff"
+                      :style="{ color: notificationsToggleChecked ? '#03c8bf' : '' }"></ion-icon>
                   </div>
                 </section>
 
@@ -39,7 +43,9 @@
                   </header>
                   <div>
                     <ion-toggle v-model="volumeToggleChecked" :checked="true"></ion-toggle>
-                    <ion-icon class="settings-view-icon  transition-delay" :src="volumeToggleChecked ? volumeHigh : volumeMute" :style="{color: volumeToggleChecked ? '#03c8bf' : ''}"></ion-icon>
+                    <ion-icon class="settings-view-icon  transition-delay"
+                      :src="volumeToggleChecked ? volumeHigh : volumeMute"
+                      :style="{ color: volumeToggleChecked ? '#03c8bf' : '' }"></ion-icon>
                   </div>
                 </section>
 
@@ -49,8 +55,37 @@
                     <h4>Thema</h4>
                   </header>
                   <div>
-                    <ion-toggle v-model="themeToggleChecked" :checked="true"  @click="changeTheme"></ion-toggle>
-                    <ion-icon class="settings-view-icon  transition-delay" :src="themeToggleChecked ? sunny : moon" :style="{color: themeToggleChecked ? '#03c8bf' : ''}"></ion-icon>
+                    <ion-toggle v-model="themeToggleChecked" :checked="true" @click="changeTheme"></ion-toggle>
+                    <ion-icon class="settings-view-icon  transition-delay" :src="themeToggleChecked ? sunny : moon"
+                      :style="{ color: themeToggleChecked ? '#03c8bf' : '' }"></ion-icon>
+                  </div>
+                </section>
+
+              </article>
+
+              <!-- User Settings -->
+              <article>
+                <header>
+                  <h2>Gebruiker</h2>
+                </header>
+
+                <!-- Username Settings -->
+                <section>
+                  <header>
+                    <h4>Inlognaam</h4>
+                  </header>
+                  <div>
+                    <ion-input></ion-input>
+                  </div>
+                </section>
+
+                <!-- Password Settings -->
+                <section>
+                  <header>
+                    <h4>Wachtwoord</h4>
+                  </header>
+                  <div>
+                    <ion-input></ion-input>
                   </div>
                 </section>
 
@@ -58,7 +93,7 @@
             </ion-card-content>
 
           </ion-card>
-          </div>
+        </div>
       </ion-content>
 
     </page-layout>
@@ -67,8 +102,8 @@
 
 <script lang="ts">
 import { defineComponent, ref } from 'vue';
-import PageLayout from '@/components/PageLayout.vue';
-import { IonPage, IonIcon, IonContent, IonCard, IonToggle, IonButton, IonCardHeader, IonCardTitle, IonCardContent } from '@ionic/vue';
+import PageLayout from '@/components/includes/PageLayout.vue';
+import { IonPage, IonIcon, IonContent, IonCard, IonToggle, IonButton, IonCardHeader, IonCardTitle, IonCardContent, IonInput } from '@ionic/vue';
 import { moon, sunny, volumeHigh, volumeMute, notifications, notificationsOff } from 'ionicons/icons'
 
 
@@ -83,10 +118,11 @@ export default defineComponent({
     IonButton,
     IonCardHeader,
     IonCardTitle,
-    IonCardContent
+    IonCardContent,
+    IonInput,
   },
   setup() {
-    
+
     const notificationsIcon = ref(notifications);
     const volumesIcon = ref(volumeHigh);
     const themesIcon = ref(sunny);
@@ -115,13 +151,13 @@ export default defineComponent({
   methods: {
     changeTheme(e: any) {
       if (e.target.checked) {
-        document.body.classList.add("themeToggle"); 
+        document.body.classList.add("themeToggle");
       } else {
         document.body.classList.remove("themeToggle");
       }
     }
   }
-  
+
 });
 </script>
 

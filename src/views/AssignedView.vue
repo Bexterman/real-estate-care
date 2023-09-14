@@ -25,51 +25,56 @@
               <ion-button @click="toggleForm">Rapportage opmaken</ion-button>
 
               <!-- Forms Reports -->
+
               <v-form v-if="showForm" @submit="onSubmit">
 
                 <!-- Form Global Information -->
-                <FormGlobal/>
-
+                <form-global></form-global>
                 <!-- Select Forms -->
                 <ion-select v-model="selectedFormOption">
                   <ion-select-option value="disabled">kies een formulier</ion-select-option>
                   <ion-select-option value="formDamage">Schade opnemen</ion-select-option>
+                  <ion-select-option value="formMaintenance">Onderhoud opnemen</ion-select-option>
+                  <ion-select-option value="formTechnical">Installatie opnemen</ion-select-option>
+                  <ion-select-option value="formModifications">Modificaties opnemen</ion-select-option>
                   <ion-select-option value="all">Alle formulieren</ion-select-option>
                 </ion-select>
 
-                  <!-- Form Damage Report -->
-                  <form-damage v-if="selectedFormOption === 'formDamage'"></form-damage>
-                  <form-damage v-if="selectedFormOption === 'all'"></form-damage>
+                <!-- Form Damage Report -->
+                <form-damage v-if="selectedFormOption === 'formDamage'"></form-damage>
+                <form-damage v-if="selectedFormOption === 'all'"></form-damage>
 
-                  <!-- Form Maintenance Report -->
+                <!-- Form Maintenance Report -->
+                <form-maintenance v-if="selectedFormOption === 'formMaintenance'"></form-maintenance>
+                <form-maintenance v-if="selectedFormOption === 'all'"></form-maintenance>
 
+                <!-- Form Tehcnical Report -->
+                <form-technical v-if="selectedFormOption === 'formTechnical'"></form-technical>
+                <form-technical v-if="selectedFormOption === 'all'"></form-technical>
 
-                  <!-- Form Tehcnical Report -->
+                <!-- Form Modifications Report -->
+                <form-modifications v-if="selectedFormOption === 'formModifications'"></form-modifications>
+                <form-modifications v-if="selectedFormOption === 'all'"></form-modifications>
 
-                    
-                  <!-- Form Modifications Report -->
-
-                <ion-button type="submit" expand="block">Verzend</ion-button>
+                <ion-button class="btn__send-report" type="submit" expand="block">Verzend</ion-button>
               </v-form>
+
 
               <!-- Overview Submitted Reports -->
               <br>
               <br>
 
               <br>
-                <hr>
+              <hr>
               <br>
 
               <header>
                 <h2 class="heading-overview-reports">Recent opgemaakt</h2>
-                <small><em>wijzigen mogelijk</em></small>
               </header>
               <br>
               <br>
 
               <RecentAssignedReports :formSubmissions="formSubmissions" />
-
-              <ListRecentAssignedReports/>
 
             </ion-card-content>
           </ion-card>
@@ -81,11 +86,13 @@
 </template>
 
 <script lang="ts">
-import PageLayout from '@/components/PageLayout.vue';
-import FormGlobal from '@/components/FormGlobal.vue';
-import FormDamage from '@/components/FormDamage.vue';
-import RecentAssignedReports from '@/components/RecentAssignedReports.vue';
-import ListRecentAssignedReports from '@/components/ListRecentAssignedReports.vue';
+import PageLayout from '@/components/includes/PageLayout.vue';
+import FormGlobal from '@/components/forms/FormGlobal.vue';
+import FormDamage from '@/components/forms/FormDamage.vue';
+import FormMaintenance from '@/components/forms/FormMaintenance.vue';
+import FormTechnical from '@/components/forms/FormTechnical.vue';
+import FormModifications from '@/components/forms/FormModifications.vue';
+import RecentAssignedReports from '@/components/lists/RecentAssignedReports.vue';
 
 
 import { defineComponent, ref, Ref } from 'vue';
@@ -98,8 +105,11 @@ export default defineComponent({
     PageLayout,
     FormGlobal,
     FormDamage,
+    FormMaintenance,
+    FormTechnical,
+    FormModifications,
     RecentAssignedReports,
-    ListRecentAssignedReports,
+
     IonPage,
     IonCard,
     IonContent,
@@ -110,21 +120,21 @@ export default defineComponent({
     IonButton,
     IonSelect,
     IonSelectOption,
-    VForm : V.Form,
+    VForm: V.Form,
   },
   setup() {
     const selectedFormOption = ref('disabled');
     const showForm = ref(false);
     const formSubmissions: Ref<any[]> = ref([]);
 
-
     const onSubmit = (data: any) => {
       formSubmissions.value.unshift(data);
+      selectedFormOption.value = 'disabled';
     };
 
     const toggleForm = () => {
       showForm.value = !showForm.value;
-    };
+    }
 
     return {
       onSubmit,
@@ -132,8 +142,7 @@ export default defineComponent({
       showForm,
       toggleForm,
       formSubmissions,
-
-    }
+    };
   },
 });
 </script>

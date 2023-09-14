@@ -166,10 +166,9 @@
             "mfs_type": "Luifel hangt scheef door hevige wind.",
             "mfs_action_required": "Laten verwijderen",
             "mfs_commentary": "De luifel is misvormd. Waarschijnlijk iets zwaars op gevallen. ",
-            "mfs_image1": "foto23.jpeg",
-            "mfs_image2": "foto24.jpeg",
-            "mfs_image3": "foto25"
-            
+            "mfs_image_a": "foto23.jpeg",
+            "mfs_image_b": "foto24.jpeg",
+            "mfs_image_c": "foto25.jpeg"
           }
         }
       ]

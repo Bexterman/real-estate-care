@@ -7,6 +7,11 @@
 .form-heading {
   color: var(--accent-10);
   letter-spacing: .6px;
+  padding-block-start: 80px;
+}
+
+.form-heading ion-icon {
+  margin-inline-end: 10px;
 }
 
 .form-error {
@@ -20,15 +25,27 @@
   margin-block-start: 30px;
 }
 
-ion-button {
-  margin-block-start: 30px;
+.btn__send-report {
+  margin-block: 80px 108px;
 }
+
+
 
 /* -----------------## Form Styles */
 .form-input {
   --highlight-color-focused: var(--accent-10);
   color: var(--rec-primary-color);
 }
+
+.input__type-file {
+  border-radius: 6px;
+}
+
+.custom-label__disabled .label-text-wrapper {
+  color: var(--rec-primary-color);
+  font-size: inherit;
+}
+
 
 /* ----### Radio Button Styles */
 ion-radio-group {

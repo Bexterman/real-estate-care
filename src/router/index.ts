@@ -1,37 +1,56 @@
 import { createRouter, createWebHistory } from '@ionic/vue-router';
 import { RouteRecordRaw } from 'vue-router';
-import HomeView from '@/views/HomeView.vue';
 
 const routes: Array<RouteRecordRaw> = [
   {
     path: '/',
     name: 'home',
-    component: HomeView
+    component: () => import('@/views/HomeView.vue')
   },
   {
-    path: '/assigned',
+    path: '/instellingen/user/edit',
+    name: 'edit',
+    component: () => import('@/views/EditView.vue')
+  },
+  {
+    path: '/toegewezen',
     name: 'assigned',
     component: () => import('@/views/AssignedView.vue')
   },
   {
-    path: '/completed',
+    path: '/actieve-taak',
+    name: 'actieve-taak',
+    component: () => import('@/views/ActiveTasksView.vue')
+  },
+  {
+    path: '/uitgevoerd',
     name: 'completed',
     component: () => import('@/views/CompletedView.vue')
   },
   {
-    path: '/knowledgebase',
+    path: '/zoeken',
+    name: 'search',
+    component: () => import('@/views/SearchReportView.vue')
+  },
+  {
+    path: '/kennisbank',
     name: 'knowledgebase',
     component: () => import('@/views/KnowledgeBaseView.vue')
   },
   {
-    path: '/settings',
+    path: '/instellingen',
     name: 'settings',
     component: () => import('@/views/SettingsView.vue')
   },
   {
-    path: '/notifications',
+    path: '/meldingen',
     name: 'notifications',
     component: () => import('@/views/NotificationsView.vue')
+  },
+  {
+    path: '/info',
+    name: 'info',
+    component: () => import('@/views/InformationView.vue')
   },
 ]
 
