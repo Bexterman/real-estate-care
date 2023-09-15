@@ -7,28 +7,28 @@
 
     <ion-item>
       <v-field name="id" v-slot="{ field }" :rules="isRequired">
+        <v-error-message name="id" class="form-error" />
         <ion-input v-bind="field" name="id" class="form-input" label="Identificatienummer:" labelPlacement="floating"
           type="number" placeholder="Geef een unieke cijfercode"></ion-input>
       </v-field>
     </ion-item>
-    <v-error-message name="id" class="form-error" />
 
     <ion-item>
       <v-field name="date" v-slot="{ field }" :rules="isRequired">
+        <v-error-message name="date" class="form-error" />
         <ion-input v-bind="field" class="form-input" label="Opmaakdatum:" labelPlacement="floating"
           type="date"></ion-input>
       </v-field>
     </ion-item>
-    <v-error-message name="date" class="form-error" />
 
 
     <ion-item>
       <v-field name="address" v-slot="{ field }" :rules="isRequired">
+        <v-error-message name="address" class="form-error" />
         <ion-input v-bind="field" name="address" class="form-input" label="Adres:" labelPlacement="floating"
           placeholder="Voorbeeldstraat 12A, 3456BC Alfabetstad"></ion-input>
       </v-field>
     </ion-item>
-    <v-error-message name="address" class="form-error" />
 
   </ion-list>
 </template>

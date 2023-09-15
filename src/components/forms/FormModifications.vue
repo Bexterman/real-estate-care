@@ -5,7 +5,7 @@
   </header>
 
   <ion-list>
-    <!-- Modifications PDF -->
+    <!-- ######### TO DO Modifications PDF ########## -->
 
     <!-- Location -->
     <ion-item>
@@ -29,8 +29,9 @@
     </ion-item>
 
     <!-- Nature of Modification -->
-    <v-field name="mfs_type" v-slot="{ field }">
+    <v-field name="mfs_type" v-slot="{ field }" :rules="isRequired">
       <ion-item>
+        <v-error-message name="mfs_type" class="form-error" />
         <ion-textarea v-bind="field" label="Omschrijving:" labelPlacement="floating" class="form-input"
           placeholder="Omschrijf de modificatie..."></ion-textarea>
       </ion-item>
@@ -39,6 +40,7 @@
     <!-- Action Required -->
     <ion-item>
       <v-field name="mfs_action_required" v-slot="{ field }" :rules="isRequired">
+        <v-error-message name="mfs_action_required" class="form-error" />
         <ion-select v-bind="field" label="Actie vereist:" label-placement="floating" class="form-input" justify="start">
           <ion-select-option v-bind="field" name="accepteren" value="Accepteren">Accepteren</ion-select-option>
           <ion-select-option v-bind="field" name="laten-keuren" value="Laten keuren">Laten keuren</ion-select-option>
@@ -50,7 +52,6 @@
         </ion-select>
       </v-field>
     </ion-item>
-    <v-error-message name="mfs_action_required" class="form-error" />
 
     <!-- Commentary -->
     <v-field name="mfs_commentary" v-slot="{ field }">

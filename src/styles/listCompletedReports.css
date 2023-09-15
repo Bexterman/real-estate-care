@@ -66,3 +66,13 @@
   font-weight: bold;
   margin-inline-end: 3px;
 }
+
+.edit__form-btn {
+  margin-inline-end: 20px;
+  margin-block: 40px;
+  font-size: 13px;
+}
+
+.recent-assigned-form__header {
+  margin-block-start: 40px;
+}

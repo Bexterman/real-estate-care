@@ -17,7 +17,8 @@
 
     <!-- Type -->
     <ion-item>
-      <v-field name="tch_type" v-slot="{ field }">
+      <v-field name="tch_type" v-slot="{ field }" :rules="isRequired">
+        <v-error-message name="tch_type" class="form-error" />
         <ion-select v-bind="field" label="Soort schade" label-placement="floating" class="form-input" justify="start">
           <ion-select-option v-bind="field" name="koeling" value="Koeling">Koeling</ion-select-option>
           <ion-select-option v-bind="field" name="verwarming" value="Verwarming">Verwarming</ion-select-option>
@@ -30,8 +31,9 @@
     </ion-item>
 
     <!-- Malfunction -->
-    <v-field name="tch_malfunction" v-slot="{ field }">
+    <v-field name="tch_malfunction" v-slot="{ field }" :rules="isRequired">
       <ion-item>
+        <v-error-message name="tch_malfunction" class="form-error" />
         <ion-textarea v-bind="field" label="Gemelde storingen:" labelPlacement="floating" class="form-input"
           placeholder="Omschrijf de storing..."></ion-textarea>
       </ion-item>
@@ -48,7 +50,8 @@
 
     <!-- Approved -->
     <ion-item>
-      <v-field name="tch_approved" v-slot="{ field }">
+      <v-field name="tch_approved" v-slot="{ field }" :rules="isRequired">
+        <v-error-message name="tch_approved" class="form-error" />
         <ion-radio-group v-bind="field" name="tch_approved" class="form-input"><span>Goedgekeurd</span>
           <ion-radio value="true">ja</ion-radio>
           <ion-radio value="false">nee</ion-radio>

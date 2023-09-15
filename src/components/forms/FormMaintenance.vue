@@ -32,13 +32,13 @@
     <!-- Action Required -->
     <ion-item>
       <v-field name="mtc_action_required" v-slot="{ field }" :rules="isRequired">
+        <v-error-message name="mtc_action_required" class="form-error" />
         <ion-radio-group v-bind="field" name="mtc_action_required" class="form-input"><span>Acute actie</span>
           <ion-radio value="true">ja</ion-radio>
           <ion-radio value="false">nee</ion-radio>
         </ion-radio-group>
       </v-field>
     </ion-item>
-    <v-error-message name="mtc_action_required" class="form-error" />
 
     <!-- Indication costs -->
     <v-field name="mtc_estimated_expense" v-slot="{ field }">

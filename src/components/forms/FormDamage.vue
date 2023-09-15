@@ -51,13 +51,13 @@
     <!-- Action Required -->
     <ion-item>
       <v-field name="dmg_action_required" v-slot="{ field }" :rules="isRequired">
+        <v-error-message name="dmg_action_required" class="form-error" />
         <ion-radio-group v-bind="field" name="dmg_action_required" class="form-input"><span>Acute actie:</span>
           <ion-radio value="true">ja</ion-radio>
           <ion-radio value="false">nee</ion-radio>
         </ion-radio-group>
       </v-field>
     </ion-item>
-    <v-error-message name="dmg_action_required" class="form-error" />
 
     <!-- Description -->
     <v-field name="dmg_description" v-slot="{ field }">
