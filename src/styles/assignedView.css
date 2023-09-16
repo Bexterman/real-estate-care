@@ -15,14 +15,17 @@
 }
 
 .form-error {
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  inline-size: 50px;
   color: red;
   font-style: italic;
   font-size: smaller;
-  padding-block-end: 5px;
 }
 
 .main-card-content form header {
-  margin-block-start: 30px;
+  margin-block-start: 2px;
 }
 
 .btn__send-report {

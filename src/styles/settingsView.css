@@ -1,3 +1,8 @@
+.main-container .settings__page {
+  max-inline-size: 500px;
+  margin: 0 auto;
+}
+
 /* -----------------## Main Content Header Styles */
 .settings__page .main-card-content header {
 inline-size: 100%;

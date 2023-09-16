@@ -125,7 +125,7 @@ export default defineComponent({
     const inputModel = ref('');
     const isRequired = (value: any) => {
       if (!value) {
-        return "vereist veld";
+        return "vereist";
       }
       return true;
     };

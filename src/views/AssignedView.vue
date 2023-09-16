@@ -39,6 +39,7 @@
                   <ion-select-option value="formModifications">Modificaties opnemen</ion-select-option>
                   <ion-select-option value="all">Alle formulieren</ion-select-option>
                 </ion-select>
+                <p><em>Een formulier gekozen? <br>Scroll naar beneden om het formulier in te vullen</em></p>
 
                 <!-- Form Damage Report -->
                 <form-damage v-if="selectedFormOption === 'formDamage'"></form-damage>
