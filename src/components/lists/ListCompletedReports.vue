@@ -238,4 +238,4 @@ export default defineComponent({
 });
 </script>
 
-<style src="../../styles/listCompletedReports.css"></style>
+<style scoped src="../../styles/listCompletedReports.css"></style>
