@@ -73,14 +73,12 @@ export default defineComponent({
   },
   methods: {
     toggleDarkMode() {
-      this.darkTheme = !this.darkTheme; // Toggle the darkTheme property
+      this.darkTheme = !this.darkTheme;
 
-      // Update local storage
       localStorage.setItem("darkTheme", this.darkTheme ? "enabled" : "disabled");
     },
   },
   created() {
-    // Retrieve darkTheme value from local storage
     const darkTheme = localStorage.getItem("darkTheme");
 
     if (darkTheme === "enabled") {
@@ -89,7 +87,6 @@ export default defineComponent({
   },
   watch: {
     darkTheme(newValue) {
-      // Apply the dark theme to your UI based on the newValue
       let theme: any = document.getElementById("theme");
       const toggleBtn = document.getElementById("toggle-btn");
 
