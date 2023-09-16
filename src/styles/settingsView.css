@@ -1,10 +1,10 @@
 /* -----------------## Main Content Header Styles */
-.main-card-content header {
+.settings__page .main-card-content header {
 inline-size: 100%;
 }
 
 /* -----------------## Main Content Section Styles */
-.main-card-content section {
+.settings__page .main-card-content section {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -12,44 +12,29 @@ inline-size: 100%;
   max-width: 220px;
 }
 
-.main-card-content section div {
+.settings__page .main-card-content section div {
   display: flex;
   justify-content: center;
   align-items: center;
   inline-size: 100%;
 }
 
-.card-content-md h4 {
+.settings__page .card-content-md h4 {
   inline-size: 100%;
 }
 
-/* ----### Toggle Styles */
-
-ion-toggle {
-  padding-block: 5px;
-  padding-inline: 10px;
-  margin-block: 10px;
-}
-
-/* ----### Icon Styles */
-.settings-view-icon  {
-  font-size: 1.375rem;
-  margin-inline-start: 20px;
-  color: var(--rec-primary-color) !important;
-}
-
-.transition-delay {
-  transition: all 300ms;
+.settings__page .main-card-content ion-button {
+  width: 100px;
 }
 
 @media only screen and (max-width: 300px) {
  /* ---------------## Page Main Styles ##------------------- */
-  .main-card-container {
+ .settings__page .main-card-container {
     padding: 10px;
   }
 
 /* -----------------## Main Content Header Styles */
-  .main-card-content header {
+.settings__page .main-card-content header {
     margin-inline-end: 10px;
   }
 }

@@ -216,7 +216,7 @@ ion-item {
   align-items: center;
   width: 100%;
   background-color: var(--page-footer-background);
-  padding: 10px;
+  padding-block: 5px;
 }
 
 /* ----### Footer Navigation Styles */
@@ -233,7 +233,7 @@ ion-item {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 10px;
+    gap: 3px;
     padding: 2px;
     color: var(--page-footer-text);
   }
@@ -258,7 +258,7 @@ ion-item {
 
 /* -----------------## Footer Styles */
 .footer-icon-wrapper ion-icon {
-  font-size: 24px;
+  font-size: 21px;
 }
 
   .footer-icon-text {
@@ -303,7 +303,7 @@ ion-item {
 
   /* ---------------## Footer Styles */
   .footer-icon-wrapper ion-icon {
-    font-size: 28px;
+    font-size: 24px;
   }
 }
 

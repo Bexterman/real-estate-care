@@ -5,7 +5,7 @@
       <!-- Content -->
       <ion-content>
         <div class="main-container">
-          <ion-card class="main-card-container">
+          <ion-card class="main-card-container settings__page">
 
             <!-- Page Header -->
             <ion-card-header class="main-card-header">
@@ -17,79 +17,25 @@
             <!-- Main Content -->
             <ion-card-content class="main-card-content">
 
-              <!-- Global Settings -->
-              <article>
+              <!-- Theme Settings -->
+              <section>
                 <header>
-                  <h2>Algemeen</h2>
+                  <h2>Thema</h2>
                 </header>
-
-                <!-- Notification Settings -->
-                <section>
-                  <header>
-                    <h4>Meldingen</h4>
-                  </header>
-                  <div>
-                    <ion-toggle v-model="notificationsToggleChecked"></ion-toggle>
-                    <ion-icon class="settings-view-icon transition-delay"
-                      :src="notificationsToggleChecked ? notifications : notificationsOff"
-                      :style="{ color: notificationsToggleChecked ? '#03c8bf' : '' }"></ion-icon>
-                  </div>
-                </section>
-
-                <!-- Sound Settings -->
-                <section>
-                  <header>
-                    <h4>Geluid</h4>
-                  </header>
-                  <div>
-                    <ion-toggle v-model="volumeToggleChecked" :checked="true"></ion-toggle>
-                    <ion-icon class="settings-view-icon  transition-delay"
-                      :src="volumeToggleChecked ? volumeHigh : volumeMute"
-                      :style="{ color: volumeToggleChecked ? '#03c8bf' : '' }"></ion-icon>
-                  </div>
-                </section>
-
-                <!-- Theme Settings -->
-                <section>
-                  <header>
-                    <h4>Thema</h4>
-                  </header>
-                  <div>
-                    <ion-toggle v-model="themeToggleChecked" :checked="true" @click="changeTheme"></ion-toggle>
-                    <ion-icon class="settings-view-icon  transition-delay" :src="themeToggleChecked ? sunny : moon"
-                      :style="{ color: themeToggleChecked ? '#03c8bf' : '' }"></ion-icon>
-                  </div>
-                </section>
-
-              </article>
+                <ion-button id="toggle-btn" class="themeToggle" @click="toggleDarkMode">
+                  Wijzig
+                </ion-button>
+              </section>
 
               <!-- User Settings -->
-              <article>
+              <section>
                 <header>
                   <h2>Gebruiker</h2>
                 </header>
+                <ion-button class="themeToggle">Log uit</ion-button>
 
-                <!-- Username Settings -->
-                <section>
-                  <header>
-                    <h4>Inlognaam</h4>
-                  </header>
-                  <div>
-                    <ion-input></ion-input>
-                  </div>
-                </section>
+              </section>
 
-                <!-- Password Settings -->
-                <section>
-                  <header>
-                    <h4>Wachtwoord</h4>
-                  </header>
-                  <div>
-                    <ion-input></ion-input>
-                  </div>
-                </section>
-
-              </article>
             </ion-card-content>
 
           </ion-card>
@@ -101,10 +47,9 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, ref } from 'vue';
+import { defineComponent } from 'vue';
 import PageLayout from '@/components/includes/PageLayout.vue';
 import { IonPage, IonIcon, IonContent, IonCard, IonToggle, IonButton, IonCardHeader, IonCardTitle, IonCardContent, IonInput } from '@ionic/vue';
-import { moon, sunny, volumeHigh, volumeMute, notifications, notificationsOff } from 'ionicons/icons'
 
 
 export default defineComponent({
@@ -121,43 +66,43 @@ export default defineComponent({
     IonCardContent,
     IonInput,
   },
-  setup() {
-
-    const notificationsIcon = ref(notifications);
-    const volumesIcon = ref(volumeHigh);
-    const themesIcon = ref(sunny);
-
-    const notificationsToggleChecked = ref(true);
-    const volumeToggleChecked = ref(true);
-    const themeToggleChecked = ref(true);
-
+  data() {
     return {
-      notifications,
-      notificationsOff,
-      volumeMute,
-      volumeHigh,
-      sunny,
-      moon,
-
-      notificationsIcon,
-      volumesIcon,
-      themesIcon,
-
-      notificationsToggleChecked,
-      volumeToggleChecked,
-      themeToggleChecked
+      darkTheme: false,
     }
   },
   methods: {
-    changeTheme(e: any) {
-      if (e.target.checked) {
-        document.body.classList.add("themeToggle");
-      } else {
-        document.body.classList.remove("themeToggle");
-      }
-    }
-  }
+    toggleDarkMode() {
+      this.darkTheme = !this.darkTheme; // Toggle the darkTheme property
 
+      // Update local storage
+      localStorage.setItem("darkTheme", this.darkTheme ? "enabled" : "disabled");
+    },
+  },
+  created() {
+    // Retrieve darkTheme value from local storage
+    const darkTheme = localStorage.getItem("darkTheme");
+
+    if (darkTheme === "enabled") {
+      this.darkTheme = true;
+    }
+  },
+  watch: {
+    darkTheme(newValue) {
+      // Apply the dark theme to your UI based on the newValue
+      let theme: any = document.getElementById("theme");
+      const toggleBtn = document.getElementById("toggle-btn");
+
+
+      if (newValue) {
+        theme.classList.add("darkTheme");
+        toggleBtn?.classList.remove("themeToggle");
+      } else {
+        theme.classList.remove("darkTheme");
+        toggleBtn?.classList.add("themeToggle");
+      }
+    },
+  }
 });
 </script>
 
