@@ -158,5 +158,3 @@ export default defineComponent({
   },
 })
 </script>
-
-<style src="../../styles/listCompletedReports.css" ></style>

@@ -420,6 +420,3 @@ export default defineComponent({
   },
 });
 </script>
-
-<style src="../../styles/assignedView.css"></style>
-<style src="../../styles/listCompletedReports.css"></style>
