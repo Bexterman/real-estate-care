@@ -8,11 +8,6 @@ const routes: Array<RouteRecordRaw> = [
     component: () => import('@/views/HomeView.vue')
   },
   {
-    path: '/instellingen/user/edit',
-    name: 'edit',
-    component: () => import('@/views/EditView.vue')
-  },
-  {
     path: '/toegewezen',
     name: 'assigned',
     component: () => import('@/views/AssignedView.vue')
