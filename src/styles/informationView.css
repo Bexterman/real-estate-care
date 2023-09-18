@@ -1,0 +1,49 @@
+.main-container .info__page {
+  max-inline-size: 500px;
+  margin: 0 auto;
+}
+
+.main-card-container .info__page {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-block-start: 40px;
+  text-align: center;
+}
+
+.info__page-h1 {
+  text-align: center;
+}
+
+.main-card-container .info__page h2 {
+  font-size: 24px;
+  text-align: center;
+  font-weight: 500;
+}
+
+.main-card-container .info__page p {
+  font-size: 21px;
+  color: var(--accent-9);
+}
+
+.main-card-container .info__page div {
+  display: flex;
+  gap: 30px;
+  margin-block-start: 40px;
+}
+
+.main-card-container .info__page div small a {
+  color: inherit;
+  font-size: 13px;
+}
+
+.main-card-container .info__page div small a:hover {
+  color: var(--accent-9);
+}
+
+.all__rights__reserved {
+  color: var(--rec-primary-color);
+  font-size: 11px;
+}

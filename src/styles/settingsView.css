@@ -5,12 +5,26 @@
 
 /* -----------------## Main Content Header Styles */
 .settings__page .main-card-content header {
-inline-size: 100%;
+  display: flex;
+  justify-content: space-between;
+  inline-size: 100%;
+  margin-bottom: 10px;
+}
+
+.settings__page .main-card-content header h2 {
+  display: flex;
+  justify-content: space-between;
+  inline-size: 100%;
+}
+
+.settings__page .main-card-content ion-button {
+  width: 100px;
 }
 
 /* -----------------## Main Content Section Styles */
 .settings__page .main-card-content section {
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
   align-items: center;
   margin-bottom: 50px;
@@ -19,18 +33,13 @@ inline-size: 100%;
 
 .settings__page .main-card-content section div {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   inline-size: 100%;
+  gap: 30px;
+  margin-block-start: 5px;
 }
 
-.settings__page .card-content-md h4 {
-  inline-size: 100%;
-}
-
-.settings__page .main-card-content ion-button {
-  width: 100px;
-}
 
 @media only screen and (max-width: 300px) {
  /* ---------------## Page Main Styles ##------------------- */

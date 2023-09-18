@@ -184,7 +184,7 @@ ion-item {
   align-items: center;
   width: 100%;
   background-color: var(--page-footer-background);
-  padding-block: 5px;
+  padding-block: 9px 12px;
 }
 
 /* ----### Footer Navigation Styles */

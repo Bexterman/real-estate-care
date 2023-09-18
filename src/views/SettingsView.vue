@@ -20,19 +20,26 @@
               <!-- Theme Settings -->
               <section>
                 <header>
-                  <h2>Thema</h2>
+                  <h2>
+                    Thema
+                    <ion-button id="toggle-btn" class="themeToggle" @click="toggleDarkMode">Wijzig</ion-button>
+                  </h2>
                 </header>
-                <ion-button id="toggle-btn" class="themeToggle" @click="toggleDarkMode">
-                  Wijzig
-                </ion-button>
+
               </section>
 
               <!-- User Settings -->
               <section>
                 <header>
-                  <h2>Gebruiker</h2>
+                  <h2>
+                    Gebruiker <ion-button @click="logout" class="themeToggle">Log uit</ion-button>
+                  </h2>
                 </header>
-                <ion-button class="themeToggle">Log uit</ion-button>
+                <div>
+                  <span>E-mail: </span>
+                  <p v-if="account && account.data && account.data.session">{{ account.data.session.user.email }}</p>
+                </div>
+
 
               </section>
 
@@ -47,10 +54,11 @@
 </template>
 
 <script lang="ts">
-import { defineComponent } from 'vue';
+import { defineComponent, ref, onMounted } from 'vue';
 import PageLayout from '@/components/includes/PageLayout.vue';
 import { IonPage, IonIcon, IonContent, IonCard, IonToggle, IonButton, IonCardHeader, IonCardTitle, IonCardContent, IonInput } from '@ionic/vue';
-
+import { supabase } from '../clients/supabase'
+import router from '@/router'
 
 export default defineComponent({
   name: "SettingsView",
@@ -65,6 +73,32 @@ export default defineComponent({
     IonCardTitle,
     IonCardContent,
     IonInput,
+  },
+  setup() {
+    const account = ref();
+
+    async function getSession() {
+      account.value = await supabase.auth.getSession();
+    }
+
+    onMounted(() => {
+      getSession();
+    });
+
+    async function logout() {
+      const { error } = await supabase.auth.signOut();
+      if (!error) {
+        console.log("Logout succesful");
+        router.push("/login");
+      } else {
+        console.log(error);
+      }
+    }
+
+    return {
+      account,
+      logout,
+    };
   },
   data() {
     return {
