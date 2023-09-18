@@ -1,5 +1,5 @@
 .animation__wrapper {
-  background-color: var(--rec-secondary-color);
+  background-color: var(--accent-10);
   block-size: 100vh;
   padding: 0;
 }

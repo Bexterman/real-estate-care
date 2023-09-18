@@ -61,7 +61,7 @@ const routes: Array<RouteRecordRaw> = [
   },
   {
     path: '/animation',
-    name: 'login-animation',
+    name: 'animation',
     component: () => import('@/views/LoginAnimationView.vue'),
     meta: { requiresAuth: true }
   },
