@@ -12,20 +12,14 @@
               <ion-card-title class="main-card-title">
                 <h1>Toegewezen rapportages</h1>
               </ion-card-title>
-
-              <!-- Page Subtitle -->
-              <!-- <ion-card-subtitle class="main-card-subtitle">
-                <p><em>Tik/klik op een regel</em></p>
-              </ion-card-subtitle> -->
-
             </ion-card-header>
+
 
             <ion-card-content class="main-card-content">
               <!-- Create Form -->
               <ion-button @click="toggleForm">Rapportage opmaken</ion-button>
 
               <!-- Forms Reports -->
-
               <v-form v-if="showForm" @submit="onSubmit">
 
                 <!-- Form Global Information -->
@@ -57,25 +51,34 @@
                 <form-modifications v-if="selectedFormOption === 'formModifications'"></form-modifications>
                 <form-modifications v-if="selectedFormOption === 'all'"></form-modifications>
 
-                <ion-button class="btn__send-report" type="submit" expand="block">Verzend</ion-button>
+                <ion-button class="btn__send-report" type="submit" expand="block">Nabwerken</ion-button>
               </v-form>
 
-
-              <!-- Overview Submitted Reports -->
-              <br>
-              <br>
-
-              <br>
               <hr>
-              <br>
-
+              <!-- Overview Submitted Reports -->
               <header>
-                <h2 class="heading-overview-reports">Recent opgemaakt</h2>
+                <br>
+                <br>
+                <br>
+                <br>
+                <h2 class="heading-overview-reports">Recent opgemaakt - nabewerking</h2>
               </header>
-              <br>
+
+
               <br>
 
               <RecentAssignedReports :formSubmissions="formSubmissions" />
+              <p>
+                Controleer goed <strong>alle</strong> rapportage(s). Bent u tevreden? Verzend uw rapportage(s) naar de
+                aannemer.
+                <br><br><strong>LET OP!</strong> Zodra u op verzenden klikt worden <strong>ALLE</strong> rapportage(s)
+                verzonden.
+                <br><br>Het dringende advies om <strong>niet</strong> meerdere rapportages toe te wijzen.
+              </p>
+
+              <br>
+
+              <ion-button @click="sendFormToBase">Verzend naar aannemer</ion-button>
 
             </ion-card-content>
           </ion-card>
@@ -96,9 +99,10 @@ import FormModifications from '@/components/forms/FormModifications.vue';
 import RecentAssignedReports from '@/components/lists/RecentAssignedReports.vue';
 
 
-import { defineComponent, ref, Ref } from 'vue';
+import { defineComponent, ref, Ref, onMounted } from 'vue';
 import * as V from 'vee-validate/dist/vee-validate';
 import { IonSelect, IonSelectOption, IonButton, IonPage, IonContent, IonCard, IonCardHeader, IonCardTitle, IonCardSubtitle, IonCardContent, IonInput, IonList, IonItem } from '@ionic/vue';
+
 
 export default defineComponent({
   name: 'AssignedView',
@@ -131,10 +135,31 @@ export default defineComponent({
     const onSubmit = (data: any) => {
       formSubmissions.value.unshift(data);
       selectedFormOption.value = 'disabled';
+
+      localStorage.setItem('formSubmissions', JSON.stringify(formSubmissions.value));
     };
 
     const toggleForm = () => {
       showForm.value = !showForm.value;
+    }
+
+    onMounted(() => {
+      const storedData = localStorage.getItem('formSubmissions');
+
+      if (storedData) {
+        formSubmissions.value = JSON.parse(storedData);
+      }
+    })
+
+    const sendFormToBase = () => {
+      const storedData: string | null = localStorage.getItem('formSubmissions');
+      let confirmSending: boolean = confirm("Weet u zeker dat u alle rapportages wilt verzenden?");
+      if (confirmSending) {
+        if (storedData) {
+          localStorage.removeItem('formSubmissions');
+          location.reload();
+        }
+      }
     }
 
     return {
@@ -143,9 +168,11 @@ export default defineComponent({
       showForm,
       toggleForm,
       formSubmissions,
+      sendFormToBase,
     };
   },
 });
 </script>
 
 <style src="../styles/assignedView.css"></style>
+<style src="../styles/listCompletedReports.css"></style>

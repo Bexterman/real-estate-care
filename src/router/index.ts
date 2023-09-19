@@ -18,8 +18,8 @@ const routes: Array<RouteRecordRaw> = [
     meta: { requiresAuth: true }
   },
   {
-    path: '/actieve-taak',
-    name: 'actieve-taak',
+    path: '/actief',
+    name: 'actief',
     component: () => import('@/views/ActiveTasksView.vue'),
     meta: { requiresAuth: true }
   },
@@ -80,7 +80,6 @@ const router = createRouter({
 async function getUser(next: any) {
   localUser = await supabase.auth.getSession();
   if (localUser.data.session === null) {
-    alert("Log eerst in om deze pagina te zien")
     next("/login");
   } else {
     next();

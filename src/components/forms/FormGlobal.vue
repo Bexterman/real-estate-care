@@ -6,7 +6,7 @@
   <ion-list class="assigned-view-form-list">
 
     <ion-item>
-      <v-field name="id" v-slot="{ field }" :rules="isRequired">
+      <v-field name="id" v-slot="{ field }" :rules="[isRequired]">
         <v-error-message name="id" class="form-error" />
         <ion-input v-bind="field" name="id" class="form-input" label="Identificatienummer:" labelPlacement="floating"
           type="number" placeholder="Geef een unieke cijfercode"></ion-input>

@@ -5,8 +5,6 @@
   </header>
 
   <ion-list>
-    <!-- ######### TO DO Modifications PDF ########## -->
-
     <!-- Location -->
     <ion-item>
       <v-field name="mfs_location" v-slot="{ field }">

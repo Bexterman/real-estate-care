@@ -26,7 +26,7 @@ export default createStore({
         commit('SET_POSTS', response.data.rec_reports);
         commit('SET_LOADING', false);
       } catch (error) {
-        commit('SET_ERROR', 'An error occurred while fetching data.');
+        commit('SET_ERROR', 'Er is iets fout gegaan tijdens het ophalen van data.');
         commit('SET_LOADING', false);
       }
     },

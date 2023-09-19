@@ -28,7 +28,7 @@
     <!-- Type -->
     <ion-item>
       <v-field name="dmg_type" v-slot="{ field }">
-        <ion-select v-bind="field" label="Soort schade" label-placement="floating" class="form-input" justify="start">
+        <ion-select v-bind="field" label="Soort" label-placement="floating" class="form-input" justify="start">
           <ion-select-option v-bind="field" name="moedwillig" value="Moedwillig">Moedwillig</ion-select-option>
           <ion-select-option v-bind="field" name="slijtage" value="Slijtage">Slijtage</ion-select-option>
           <ion-select-option v-bind="field" name="geweld" value="Geweld">Geweld</ion-select-option>

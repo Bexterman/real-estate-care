@@ -18,7 +18,7 @@
     <!-- Type -->
     <ion-item>
       <v-field name="mtc_type" v-slot="{ field }">
-        <ion-select v-bind="field" label="Soort schade" label-placement="floating" class="form-input" justify="start">
+        <ion-select v-bind="field" label="Soort" label-placement="floating" class="form-input" justify="start">
           <ion-select-option v-bind="field" name="schilderwerk" value="Schilderwerk">Schilderwerk</ion-select-option>
           <ion-select-option v-bind="field" name="houtrot" value="Houtrot">Houtrot</ion-select-option>
           <ion-select-option v-bind="field" name="elektra" value="Elektra">Elektra</ion-select-option>

@@ -139,6 +139,10 @@ ion-item {
   background-color: var(--accent-2);
 }
 
+.header-nav ion-item {
+  margin: 0;
+}
+
   .header-nav-icon ion-icon {
     color: var(--accent-8);
     width: 25px;
@@ -184,32 +188,42 @@ ion-item {
   align-items: center;
   width: 100%;
   background-color: var(--page-footer-background);
-  padding-block: 9px 12px;
+  padding-block: 10px;
 }
 
 /* ----### Footer Navigation Styles */
 .footer-nav {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
   width: 1024px;
   background-color: var(--page-footer-background);
 }
 
-  .footer-icon-wrapper {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 3px;
-    padding: 2px;
-    color: var(--page-footer-text);
-  }
+.footer-icon-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 3px;
+  padding: 2px;
+  color: var(--page-footer-text);
+}
 
-  .footer-icon-wrapper:active,
-  .footer-icon-wrapper:hover {
-    color: var(--accent-9);
-  }
+.footer-icon-wrapper:active,
+.footer-icon-wrapper:hover {
+  color: var(--accent-9);
+}
+
+.footer-nav ion-item {
+  margin: 0;
+}
+
+.footer-icon-text {
+  color: var(--page-footer-text);
+}
+
+
 
 
 
@@ -287,6 +301,7 @@ ion-item {
   .footer-nav {
     max-width: 800px;
     margin: 0 auto;
+    justify-content: space-between;
   }
 
 

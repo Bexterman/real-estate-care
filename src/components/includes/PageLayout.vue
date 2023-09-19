@@ -37,7 +37,7 @@
 
           <ion-list class="footer-nav" lines="none">
 
-            <ion-item router-link="/actieve-taak">
+            <ion-item router-link="/actief">
               <div class="footer-icon-wrapper hover-routerlink">
                 <ion-icon class="footer-icon" :src="buildOutline"></ion-icon>
                 <span class="footer-icon-text">Actieve taken</span>

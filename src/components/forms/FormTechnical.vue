@@ -19,7 +19,7 @@
     <ion-item>
       <v-field name="tch_type" v-slot="{ field }" :rules="isRequired">
         <v-error-message name="tch_type" class="form-error" />
-        <ion-select v-bind="field" label="Soort schade" label-placement="floating" class="form-input" justify="start">
+        <ion-select v-bind="field" label="Soort" label-placement="floating" class="form-input" justify="start">
           <ion-select-option v-bind="field" name="koeling" value="Koeling">Koeling</ion-select-option>
           <ion-select-option v-bind="field" name="verwarming" value="Verwarming">Verwarming</ion-select-option>
           <ion-select-option v-bind="field" name="luchtverversing"
@@ -39,14 +39,17 @@
       </ion-item>
     </v-field>
 
-    <!-- Test Procedure 
-    <Router-link to="/knowledgebase">
-      <ion-button expand=“full” (click)=“openLocalPdf()”>Open Local PDF</ion-button>
-    </Router-link>
+    <!-- Test Procedure     -->
+    <ion-item lines="none">
+      <span class="custom-label__disabled">PDF-bestand toevoegen: </span>
+    </ion-item>
+    <ion-item>
+      <v-field name="tch_testprocedure" v-slot="{ field }">
+        <input v-bind="field" accept="application/pdf" class="form-input input__type-file" label="PDF-bestand"
+          labelPlacement="floating" type="file">
+      </v-field>
+    </ion-item>
 
-    *** NOG TE DOEN 
-    https://ionicframework.com/docs/native/filesystem
-    -->
 
     <!-- Approved -->
     <ion-item>

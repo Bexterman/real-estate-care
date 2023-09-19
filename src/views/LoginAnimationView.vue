@@ -21,25 +21,20 @@ export default defineComponent({
     IonCardContent,
   },
   setup() {
-    // Use ref to track whether the timeout has been triggered
     const timeoutTriggered = ref(false);
-
-    // Add a function to navigate to the homepage
     const navigateToHomePage = () => {
-      router.push('/'); // Replace '/' with the actual route to your homepage
+      router.push('/');
     };
 
-    // Watch for changes in timeoutTriggered and navigate when it becomes true
     watch(timeoutTriggered, (newValue) => {
       if (newValue) {
         navigateToHomePage();
       }
     });
 
-    // Use setTimeout to set timeoutTriggered to true after 7 seconds
     setTimeout(() => {
       timeoutTriggered.value = true;
-    }, 7500); // 7000 milliseconds = 7 seconds
+    }, 7500);
 
     return {
       timeoutTriggered,

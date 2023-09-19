@@ -19,6 +19,11 @@
             <li>
               <header class="recent-assigned-form__header">
                 <h3>Beschadiging</h3>
+                <div>
+                  <ion-button class="edit__form-btn" @click="editDamage(submission.id)">Bewerken</ion-button>
+                  <ion-button class="edit__form-btn" @click="saveDamage(submission.id)"
+                    v-if="submission.editing">Opslaan</ion-button>
+                </div>
               </header>
 
               <!-- Location -->
@@ -88,10 +93,6 @@
               <p>Afbeelding 2: <a>{{ submission.dmg_image_b }}</a></p>
               <p>Afbeelding 3: <a>{{ submission.dmg_image_c }}</a> </p>'
               <br>
-
-              <ion-button class="edit__form-btn" @click="editDamage(submission.id)">Bewerken</ion-button>
-              <ion-button class="edit__form-btn" @click="saveDamage(submission.id)"
-                v-if="submission.editing">Opslaan</ion-button>
             </li>
 
             <hr>
@@ -110,6 +111,11 @@
             <li>
               <header class="recent-assigned-form__header">
                 <h3>Achterstallig Onderhoud</h3>
+                <div>
+                  <ion-button class="edit__form-btn" @click="editDamage(submission.id)">Bewerken</ion-button>
+                  <ion-button class="edit__form-btn" @click="saveDamage(submission.id)"
+                    v-if="submission.editing">Opslaan</ion-button>
+                </div>
               </header>
 
               <!-- Location -->
@@ -168,10 +174,6 @@
               <p>Afbeelding 2: <a>{{ submission.mtc_image_b }}</a> </p>
               <p>Afbeelding 3: <a>{{ submission.mtc_image_c }}</a> </p>
               <br>
-
-              <ion-button class="edit__form-btn" @click="editDamage(submission.id)">Bewerken</ion-button>
-              <ion-button class="edit__form-btn" @click="saveDamage(submission.id)"
-                v-if="submission.editing">Opslaan</ion-button>
             </li>
 
             <hr>
@@ -190,6 +192,11 @@
             <li>
               <header class="recent-assigned-form__header">
                 <h3>Technische Installatie</h3>
+                <div>
+                  <ion-button class="edit__form-btn" @click="editDamage(submission.id)">Bewerken</ion-button>
+                  <ion-button class="edit__form-btn" @click="saveDamage(submission.id)"
+                    v-if="submission.editing">Opslaan</ion-button>
+                </div>
               </header>
 
               <!-- Location -->
@@ -222,7 +229,6 @@
                   v-model="submission.tch_description" :disabled="!submission.editing"></ion-textarea>
               </ion-item>
 
-              <!-- ################# TO DO ################## -->
               <p><span>Testprocedure:</span> {{ submission.tch_testprocedure }} </p>
 
               <!-- Approved -->
@@ -249,10 +255,6 @@
               <p>Afbeelding 2: <a>{{ submission.tch_image_b }}</a> </p>
               <p>Afbeelding 3: <a>{{ submission.tch_image_c }}</a> </p>
               <br>
-
-              <ion-button class="edit__form-btn" @click="editDamage(submission.id)">Bewerken</ion-button>
-              <ion-button class="edit__form-btn" @click="saveDamage(submission.id)"
-                v-if="submission.editing">Opslaan</ion-button>
             </li>
 
             <hr>
@@ -271,11 +273,12 @@
             <li>
               <header class="recent-assigned-form__header">
                 <h3>Modificaties</h3>
+                <div>
+                  <ion-button class="edit__form-btn" @click="editDamage(submission.id)">Bewerken</ion-button>
+                  <ion-button class="edit__form-btn" @click="saveDamage(submission.id)"
+                    v-if="submission.editing">Opslaan</ion-button>
+                </div>
               </header>
-
-              <!-- ################# TO DO ################## -->
-              <p><span>Documentatie:</span> <a>{{ submission.mfs_documented }}</a> </p>
-
 
               <!-- Location -->
               <ion-item>
@@ -337,10 +340,6 @@
               <p>Afbeelding 2: <a>{{ submission.mfs_image_b }}</a> </p>
               <p>Afbeelding 3: <a>{{ submission.mfs_image_c }}</a> </p>
               <br>
-
-              <ion-button class="edit__form-btn" @click="editDamage(submission.id)">Bewerken</ion-button>
-              <ion-button class="edit__form-btn" @click="saveDamage(submission.id)"
-                v-if="submission.editing">Opslaan</ion-button>
             </li>
           </ul>
         </div>
@@ -405,7 +404,7 @@ export default defineComponent({
     return {
       toggleDropdown,
       dropdownReport,
-      isRequired
+      isRequired,
     }
   },
   methods: {

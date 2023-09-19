@@ -73,6 +73,19 @@
   font-size: 13px;
 }
 
+/* -----------------## Recently Added Reports Styles */
+
+.recent-assigned-form__header  h3 {
+  margin: 0;
+}
+
 .recent-assigned-form__header {
-  margin-block-start: 40px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.recent-assigned-form__header ion-button {
+  font-size: 12px;
+  block-size: 20px;
 }
