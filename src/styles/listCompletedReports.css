@@ -80,12 +80,20 @@
 }
 
 .recent-assigned-form__header {
+  position: relative;
   display: flex;
   align-items: center;
   gap: 20px;
+  overflow: visible;
 }
 
 .recent-assigned-form__header ion-button {
-  font-size: 12px;
+  font-size: 10px;
   block-size: 20px;
 }
+
+.recent-assigned__edit__btn {
+  position: absolute;
+  display: flex;
+  margin-block-start: 50px;
+  }

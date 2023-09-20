@@ -19,7 +19,7 @@
             <li>
               <header class="recent-assigned-form__header">
                 <h3>Beschadiging</h3>
-                <div>
+                <div class="recent-assigned__edit__btn">
                   <ion-button class="edit__form-btn" @click="editDamage(submission.id)">Bewerken</ion-button>
                   <ion-button class="edit__form-btn" @click="saveDamage(submission.id)"
                     v-if="submission.editing">Opslaan</ion-button>
@@ -111,7 +111,7 @@
             <li>
               <header class="recent-assigned-form__header">
                 <h3>Achterstallig Onderhoud</h3>
-                <div>
+                <div class="recent-assigned__edit__btn">
                   <ion-button class="edit__form-btn" @click="editDamage(submission.id)">Bewerken</ion-button>
                   <ion-button class="edit__form-btn" @click="saveDamage(submission.id)"
                     v-if="submission.editing">Opslaan</ion-button>
@@ -192,7 +192,7 @@
             <li>
               <header class="recent-assigned-form__header">
                 <h3>Technische Installatie</h3>
-                <div>
+                <div class="recent-assigned__edit__btn">
                   <ion-button class="edit__form-btn" @click="editDamage(submission.id)">Bewerken</ion-button>
                   <ion-button class="edit__form-btn" @click="saveDamage(submission.id)"
                     v-if="submission.editing">Opslaan</ion-button>
@@ -273,7 +273,7 @@
             <li>
               <header class="recent-assigned-form__header">
                 <h3>Modificaties</h3>
-                <div>
+                <div class="recent-assigned__edit__btn">
                   <ion-button class="edit__form-btn" @click="editDamage(submission.id)">Bewerken</ion-button>
                   <ion-button class="edit__form-btn" @click="saveDamage(submission.id)"
                     v-if="submission.editing">Opslaan</ion-button>

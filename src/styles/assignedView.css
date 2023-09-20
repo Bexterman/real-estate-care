@@ -46,7 +46,6 @@ ion-item span {
   color: var(--rec-primary-color);
 }
 
-
 /* -----------------## Form Styles */
 .form-input {
   --highlight-color-focused: var(--accent-10);
@@ -92,4 +91,9 @@ ion-radio {
 
 .alert-wrapper.sc-ion-alert-md {
   min-width: 300px;
+}
+
+
+.create-report-explenation {
+  font-size: 16px;
 }

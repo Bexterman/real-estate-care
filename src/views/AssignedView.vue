@@ -11,9 +11,19 @@
             <ion-card-header class="main-card-header">
               <ion-card-title class="main-card-title">
                 <h1>Toegewezen rapportages</h1>
+                <p class="create-report-explenation"><small>
+                    1. Maak een rapport op.
+                    <br> 2. Vul het algemeen formulier in.
+                    <br> 3. Kies 1 of alle formulieren.
+                    <br>4. Klik op "Nabewerken" om het rapport later te bewerken.
+                    <br>5. Controleer het formulier en verzend deze naar de aannemer.
+                    <br><em>Optioneel: u kunt ook alleen het algemeen formulier invulen en later nabewerken.</em>
+                  </small>
+                </p>
               </ion-card-title>
             </ion-card-header>
 
+            <br>
 
             <ion-card-content class="main-card-content">
               <!-- Create Form -->
@@ -51,17 +61,18 @@
                 <form-modifications v-if="selectedFormOption === 'formModifications'"></form-modifications>
                 <form-modifications v-if="selectedFormOption === 'all'"></form-modifications>
 
-                <ion-button class="btn__send-report" type="submit" expand="block">Nabwerken</ion-button>
+                <ion-button class="btn__send-report" type="submit" expand="block">Nabewerken</ion-button>
               </v-form>
 
               <hr>
               <!-- Overview Submitted Reports -->
               <header>
-                <br>
-                <br>
-                <br>
-                <br>
                 <h2 class="heading-overview-reports">Recent opgemaakt - nabewerking</h2>
+                <p>
+                  Klik op een tegel voor meer informatie.
+                  <br>Klik een tweede keer op de tegel om deze in te klappen.
+                  tegel te klikken.
+                </p>
               </header>
 
 
@@ -71,6 +82,7 @@
               <p>
                 Controleer goed <strong>alle</strong> rapportage(s). Bent u tevreden? Verzend uw rapportage(s) naar de
                 aannemer.
+                <br> De pagina zal refreshen nadat de rapportage(s) zijn verzonden.
                 <br><br><strong>LET OP!</strong> Zodra u op verzenden klikt worden <strong>ALLE</strong> rapportage(s)
                 verzonden.
                 <br><br>Het dringende advies om <strong>niet</strong> meerdere rapportages toe te wijzen.
