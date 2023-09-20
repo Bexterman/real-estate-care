@@ -70,8 +70,8 @@
                 <h2 class="heading-overview-reports">Recent opgemaakt - nabewerking</h2>
                 <p>
                   Klik op een tegel voor meer informatie.
-                  <br>Klik een tweede keer op de tegel om deze in te klappen.
-                  tegel te klikken.
+                  <br>Klik een tweede keer op de tegel om deze in te klappen tegel te klikken.<em>Scroll indien
+                    nodig.</em>
                 </p>
               </header>
 
